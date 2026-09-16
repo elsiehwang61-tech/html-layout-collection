@@ -5,9 +5,11 @@ A collection of 24 HTML layout patterns with visual sketches, use cases, and reu
 Features:
 
 - Browse page structures, text/image relationships, and content modules.
-- Bookmark favorite layouts in the current browser.
-- Export selected layouts as Markdown.
-- Copy layout descriptions for reuse with an AI assistant.
+- Preview five palettes based on the original Guyu visual style across all 24 layouts.
+- Bookmark layouts and palettes independently in the current browser.
+- Add custom colors, with pale reading surfaces and readable text colors.
+- Export selected layouts, the active palette, and favorite palette alternatives as Markdown.
+- Copy combined layout and color instructions for reuse with an AI assistant.
 
 Open `index.html` locally or use the GitHub Pages site linked from this repository.
 
@@ -15,4 +17,6 @@ The page is self-contained. No analytics, account registration, external librari
 
 All preview content is schematic. It contains no business data or authentic interview quotations. Layouts do not prescribe chart types, chapter counts, or conclusions.
 
-The complete written index is included as [布局索引_给AI.md](布局索引_给AI.md).
+Page styling preserves existing chart colors, data encoding, axes, legends, visualMap, and interactions. Decorative gradients do not determine chart types or values.
+
+The written references are included as [布局索引_给AI.md](布局索引_给AI.md) and [配色索引_给AI.md](配色索引_给AI.md). The first four palette gradients come from the original visual system; the fifth combines its pink-to-gold decorative line with newly paired pale backgrounds.
