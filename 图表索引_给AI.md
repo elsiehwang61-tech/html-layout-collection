@@ -13,7 +13,7 @@
 
 ## 读取 HTML 的方法
 
-读取 `#layout-data` 获得布局元数据，`#palette-data` 获得预置配色，`#chart-data` 获得每种图表的编号、名称、问题、字段、边界和用法。`#chart-demo-data` 是单独存放的演示值，不是业务输入。书签与自选色板存在浏览器中；跨 AI、跨设备复用时以导出的 Markdown 清单为准。
+读取 `#layout-data` 获得布局元数据，`#palette-data` 获得预置配色，`#typography-data` 获得文字角色、字重与字体回退规则（实际个人值在导出清单中），`#chart-data` 获得每种图表的编号、名称、问题、字段、边界和用法。`#chart-demo-data` 是单独存放的演示值，不是业务输入。书签与自选色板存在浏览器中；跨 AI、跨设备复用时以导出的 Markdown 清单为准。
 
 ## 快速选图
 

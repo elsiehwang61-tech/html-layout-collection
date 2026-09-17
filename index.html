@@ -47,17 +47,61 @@
 @media(max-width:350px){.chart-card{padding:12px}.chart-figure{padding:9px 4px}.chart-plot{height:285px}.chart-heading h2 span{display:block;margin:6px 0 0}.chart-title{font-size:19px}.chart-demo-label{font-size:9px}}
 @media print{.chart-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.chart-card{break-inside:avoid}.chart-controls,.chart-filters,.chart-status,.chart-usage,.chart-data-details,.chart-license{display:none}.chart-section{border-top:0}.chart-heading{break-after:avoid}.chart-plot{height:285px}}
 
-  </style>
+  
+.collection-navigation{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--line);padding:12px 0 10px;margin-bottom:24px;scroll-margin-top:0}.collection-nav-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.collection-tabs{display:flex;gap:6px;padding:4px;border:1px solid #e3e7ee;border-radius:13px;background:#f0f3f8}.collection-tab{font:inherit;font-size:14px;min-height:43px;padding:9px 22px;border:1px solid transparent;border-radius:9px;background:transparent;color:#687386;white-space:nowrap}.collection-tab span{font-size:11px;margin-left:5px;opacity:.8}.collection-tab[aria-selected=true]{background:#fff;border-color:#eed3e0;color:#ad1457;box-shadow:0 2px 8px #27344508}.collection-nav-info{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:9px;color:var(--muted);font-size:11px}.collection-nav-info a{font-size:11px;text-decoration:none}.collection-panel{scroll-margin-top:128px}.collection-panel[hidden]{display:none!important}.layout-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.layout-panel-heading h2{font-size:25px;margin:0}.layout-panel-heading p{font-size:12px;color:var(--muted);margin:3px 0}.chart-section.collection-panel{margin-top:0;padding-top:0;border:0}.collection-panel .palette-shelf{margin-top:32px;scroll-margin-top:128px}.collection-panel .layout-card,.collection-panel .chart-card{scroll-margin-top:128px}.collection-navigation .notice{margin:8px 0 0;font-size:12px}.hero{padding:26px 32px;margin-bottom:14px}.hero h1{font-size:34px}.hero-note p{font-size:12px}.collection-jumps{margin-top:12px}#new-layouts{scroll-margin-top:128px}
+.typography-section{scroll-margin-top:128px}.type-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}.type-heading h2{font-size:29px;margin:0 0 9px;line-height:1.4}.type-heading p{margin:0;color:var(--muted);font-size:13px}.type-heading .eyebrow{margin-bottom:8px;font-size:11px}.type-heading .action{text-decoration:none;white-space:nowrap;font-size:12px}.type-workbench{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:start}.type-editor{background:#fff;border:1px solid var(--line);border-radius:15px;padding:23px;min-width:0}.type-editor-title{display:flex;align-items:center;justify-content:space-between;gap:12px}.type-editor h3{margin:0;font-size:16px}.type-editor-title>span{font-size:11px;color:var(--blue);overflow-wrap:anywhere}.type-font-set{padding:0;border:0;margin:20px 0}.type-font-set legend{font-size:12px;color:var(--muted);margin-bottom:9px}.type-fonts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.type-font{display:flex;align-items:start;gap:6px;padding:10px 8px;border:1px solid var(--line);border-radius:9px;background:#fafbfc;min-width:0;cursor:pointer}.type-font:has(input:checked){background:var(--air);border-color:#e4bed0}.type-font input{accent-color:#ad1457;margin:3px 0 0;flex-shrink:0}.type-font strong{display:block;font-size:12px;font-weight:500}.type-font-sample{display:block;font-size:11px;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}.type-color-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px 12px}.type-field{display:block;min-width:0}.type-field-name{font-size:12px;line-height:1.5;display:block;margin-bottom:7px;min-height:18px}.type-field-control{display:flex;align-items:center;gap:7px}.type-field input{height:31px;width:32px;padding:2px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;flex-shrink:0}.type-field-hex{font:11px/1.4 ui-monospace,Menlo,monospace;color:var(--muted);overflow-wrap:anywhere}.type-adjustment{display:block;min-height:15px;margin-top:5px;font-size:10px;line-height:1.4;color:var(--muted)}.type-hint,.type-storage-note{font-size:12px;color:var(--muted);margin:17px 0 0}.type-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:19px}.type-actions .action{font-size:12px;padding:8px 11px}.type-storage-note{font-size:11px}.type-preview{padding:32px 34px;border:1px solid var(--line);border-radius:15px;background:#fff;color:var(--type-body,#273445);font-family:var(--type-font-body,sans-serif);min-width:0}.type-paper-label{font-size:11px;color:var(--type-secondary,#4076a5);letter-spacing:1px;margin:0 0 23px}.type-example-heading{font-family:var(--type-font-heading,sans-serif);font-size:clamp(26px,3vw,35px);line-height:1.4;font-weight:700;color:var(--type-heading,#ad1457);margin:0 0 20px}.type-example-body{font-size:16px;line-height:1.75;font-weight:400;color:var(--type-body,#273445);margin:0 0 17px}.type-example-emphasis{font-weight:500;color:var(--type-emphasis,#ad1457)}.type-example-strong{font-weight:700;color:var(--type-strong,#ad1457)}.type-example-mark{background:var(--type-highlightBg,#fce4ec);color:var(--type-highlightText,#ad1457);font-weight:400;border-radius:3px;padding:2px 4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.type-example-secondary{color:var(--type-secondary,#4076a5);font-weight:400}.type-example-link{color:var(--type-link,#4076a5);text-decoration:underline;text-underline-offset:4px}.type-role-examples{border-top:1px solid var(--line);padding-top:12px;margin-top:22px;font-size:13px}.type-role-examples p{margin:8px 0}.type-example-numbers{font-family:var(--type-font-numbers,inherit);font-variant-numeric:tabular-nums;font-size:20px;letter-spacing:1px;color:var(--type-body,#273445);margin:24px 0 0;overflow-wrap:anywhere}.type-example-numbers span{font-family:var(--type-font-body,sans-serif);display:block;font-size:10px;color:var(--type-secondary,#4076a5);letter-spacing:0;margin-top:3px}.type-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:18px}.type-bottom p{font-size:12px;color:var(--muted);max-width:760px;margin:0}.type-bottom .copy{margin:0;flex-shrink:0}.type-description{margin:14px 0}.type-description summary{cursor:pointer;font-size:12px;color:var(--blue);padding:7px 0}.type-description .prompt{margin-top:8px;min-height:220px}.type-editor input:focus-visible{outline:3px solid #4b91df;outline-offset:3px}
+.sketch{font-family:var(--type-font-body,inherit)}.sketch h3,.sketch .s-title,.sketch .s-lead{font-family:var(--type-font-heading,inherit)}.sketch .s-num{font-family:var(--type-font-numbers,inherit);font-variant-numeric:tabular-nums}.sketch .s-pink{color:var(--type-emphasis,var(--pink))}.sketch strong,.sketch b{font-weight:700;color:var(--type-strong,var(--ink))}
+@media(max-width:1100px){.type-color-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.type-fonts{grid-template-columns:1fr}.type-font{align-items:center}.type-font>span{display:flex;justify-content:space-between;gap:12px;width:100%}.type-font-sample{margin:0}.type-preview{padding:27px}}
+@media(max-width:700px){.collection-navigation{padding:9px 0;margin-bottom:22px}.collection-nav-row{align-items:stretch;flex-wrap:wrap;gap:9px}.collection-tabs{width:100%;display:grid;grid-template-columns:1fr 1.35fr 1fr;padding:3px;gap:3px}.collection-tab{font-size:12px;min-height:42px;padding:8px 5px}.collection-tab span{font-size:10px;margin-left:3px}.collection-nav-row>.action{padding:7px 12px;min-height:37px;font-size:12px;width:100%}.collection-nav-info{gap:6px;font-size:10px;align-items:start;flex-wrap:wrap}.collection-nav-info a{font-size:10px}.collection-panel,.typography-section,.collection-panel .palette-shelf,.collection-panel .chart-card,.collection-panel .layout-card,#new-layouts{scroll-margin-top:175px}.hero{padding:23px 22px;gap:16px}.hero h1{font-size:29px}.hero-note{padding-top:12px}.type-workbench{grid-template-columns:minmax(0,1fr);gap:17px}.type-heading{align-items:start;flex-direction:column;gap:12px}.type-heading h2{font-size:25px}.type-editor{padding:18px}.type-fonts{grid-template-columns:repeat(3,minmax(0,1fr))}.type-font{align-items:start;padding:9px 6px}.type-font>span{display:block;min-width:0}.type-font strong{font-size:11px}.type-font-sample{font-size:10px;margin-top:5px}.type-color-fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}.type-field-control{gap:9px}.type-field input{width:42px;height:36px}.type-field-hex{font-size:12px}.type-preview{padding:27px 24px}.type-bottom{align-items:stretch;flex-direction:column;gap:12px}.type-bottom .copy{min-height:44px}.type-actions .action{min-height:42px}.layout-panel-heading{align-items:start}.layout-panel-heading h2{font-size:23px}}
+@media(max-width:350px){.type-fonts{grid-template-columns:1fr}.type-font>span{display:flex;align-items:center;justify-content:space-between;width:100%}.type-font-sample{margin:0}.type-editor-title{display:block}.type-editor-title>span{display:block;margin-top:5px}.collection-tab{font-size:11px}.type-field-name{font-size:11px}.type-actions{flex-direction:column}.type-preview{padding:22px}}
+@media print{.collection-navigation,.type-editor,.type-bottom,.type-description,#type-status{display:none!important}.collection-panel[hidden]{display:block!important}.collection-panel{break-before:page}.type-workbench{display:block}.type-preview{max-width:650px}.chart-section.collection-panel{padding-top:0}.hero{display:none}}
+
+</style>
 </head>
 <body>
 <main class="page" id="layout-library">
   <header class="masthead"><div class="brand">雪莉的版式收藏册</div><div class="edition">VOL. 01 · 2026.09.17</div></header>
   <section class="hero" aria-labelledby="page-title">
-    <div><p class="eyebrow">LAYOUT COLLECTION</p><h1 id="page-title">把喜欢的版式，<br><span>先收藏起来。</span></h1><p>32 种布局 + 40 种图表参考。<br>选版式、选颜色，再按问题与数据选图。</p></div>
-    <div class="hero-note"><strong>喜欢的版式，配上喜欢的颜色。</strong><p>先选配色，再看 32 种布局的效果。<br>展开卡片，一起复制给 AI。</p><nav class="collection-jumps" aria-label="收藏册入口"><a class="new-entry" href="#new-layouts">新增 8 种布局 ↗</a><a href="#charts">40 种图表收藏 ↗</a><a href="#palettes">配色收藏 ↗</a></nav></div>
+    <div><p class="eyebrow">LAYOUT COLLECTION</p><h1 id="page-title">把喜欢的版式，<br><span>先收藏起来。</span></h1><p>布局、配色与文字、图表，分开找。<br>挑喜欢的，组合成自己的 HTML 风格。</p></div>
+    <div class="hero-note"><strong>喜欢的版式，配上喜欢的颜色。</strong><p>从三个 Tab 进入，保留自己的收藏。<br>选好后，把布局、文字、配色与图表一起交给 AI。</p><nav class="collection-jumps" aria-label="收藏册入口"><a class="new-entry" href="#new-layouts">新增 8 种布局 ↗</a><a href="#charts">40 种图表收藏 ↗</a><a href="#typography">文字与重点色 ↗</a></nav></div>
   </section>
+
+  <div id="collection-start" aria-hidden="true"></div>
+  <div class="collection-navigation" id="collection-navigation">
+    <div class="collection-nav-row"><div class="collection-tabs" role="tablist" aria-label="收藏册分类">
+      <button class="collection-tab" id="tab-layouts" role="tab" aria-controls="layouts" aria-selected="true" tabindex="0" type="button">布局 <span>32</span></button>
+      <button class="collection-tab" id="tab-colors" role="tab" aria-controls="colors" aria-selected="false" tabindex="-1" type="button">配色与文字</button>
+      <button class="collection-tab" id="tab-charts" role="tab" aria-controls="charts" aria-selected="false" tabindex="-1" type="button">图表 <span>40</span></button>
+    </div><button class="action primary" id="export-favorites" type="button" disabled>导出收藏清单</button></div>
+    <div class="collection-nav-info"><span id="collection-count">已收藏：0 布局 · 0 配色 · 0 图表</span><a href="#colors">当前配色：<span id="collection-palette">谷雨粉蓝</span></a></div>
+    <p class="notice" id="global-status" role="status" aria-live="polite"></p>
+  </div>
+  <section id="colors" class="collection-panel" role="tabpanel" aria-labelledby="tab-colors" tabindex="0">
+<section class="typography-section" id="typography" aria-labelledby="typography-title">
+  <div class="type-heading"><div><p class="eyebrow">COLOR &amp; TYPOGRAPHY</p><h2 id="typography-title">让文字，轻重有别。</h2><p>正文、重点、加粗和 Highlight 各有自己的颜色。先选一组色板，再微调文字。</p></div><a class="action" href="#palettes">换配色与渐变 ↓</a></div>
+  <div class="type-workbench">
+    <div class="type-editor"><div class="type-editor-title"><h3>字体与文字颜色</h3><span id="type-current">C01 谷雨粉蓝</span></div>
+      <fieldset class="type-font-set"><legend>字体搭配</legend><div id="type-fonts" class="type-fonts"></div></fieldset>
+      <div class="type-color-fields" id="type-color-fields"></div>
+      <p class="type-hint">点击色块选颜色，旁边显示实际使用色。文字过浅时会调整亮度；Highlight 字色单独匹配其底色。</p>
+      <div class="type-actions"><button type="button" class="action primary" id="type-save" aria-pressed="false">☆ 收藏这组文字与配色</button><button type="button" class="action" id="type-reset">恢复这组默认</button></div>
+      <p class="type-storage-note">文字设置按色板分别保留，收藏后可与布局、图表一起导出。字体使用设备可用字体，无需下载。</p>
+    </div>
+    <div class="type-preview" id="type-preview" aria-label="当前字体、文字与重点颜色预览">
+      <p class="type-paper-label">Aa / 文字效果预览</p><h3 class="type-example-heading">让重点，<br>自然浮出来。</h3>
+      <p class="type-example-body">先用正文把意思说完整，再用 <span class="type-example-emphasis">重点色</span> 提醒读者，用 <strong class="type-example-strong">加粗文字</strong> 留住关键判断。</p>
+      <p class="type-example-body">把需要回看的短句 <mark class="type-example-mark">轻轻标记起来</mark>，让阅读保留节奏。</p>
+      <div class="type-role-examples"><p class="type-example-emphasis">重点色 · 提示关键词</p><p><strong class="type-example-strong">加粗 · 让重要语句更清楚</strong></p><p class="type-example-secondary">说明文字 · 放补充解释与来源</p><p><a class="type-example-link" href="#palettes">链接 · 前往配色与渐变 →</a></p></div>
+      <p class="type-example-numbers">0123456789 <span>数字字体示意</span></p>
+    </div>
+  </div>
+  <div class="type-bottom"><p>重点色、加粗、高亮可以独立或组合使用；正式内容保留原意与证据。选色会更新本册布局示意和可复制说明。</p><button type="button" class="copy" id="copy-type">复制文字与配色说明</button></div>
+  <details class="type-description"><summary>查看给 AI 的文字规范</summary><textarea id="type-summary" class="prompt" readonly aria-label="当前文字规范"></textarea></details>
+  <p class="notice" id="type-status" role="status" aria-live="polite"></p>
+</section>
+
   <details class="palette-shelf" id="palettes" open>
-    <summary>配色收藏 <span class="palette-summary" id="palette-summary">谷雨粉蓝 · 可切换预览</span></summary>
+    <summary>色板与渐变 <span class="palette-summary" id="palette-summary">谷雨粉蓝 · 可切换预览</span></summary>
     <div class="palette-content">
       <p class="palette-intro">从谷雨原稿的渐变与柔和蓝整理出 5 组搭配。点「用这组」查看布局与本册图表示例效果，点「收藏」留下备选；也可以添加自己的色板。</p>
       <div class="palette-grid" id="palette-grid"></div>
@@ -75,16 +119,20 @@
       <p class="palette-note" id="palette-status" role="status" aria-live="polite"></p>
     </div>
   </details>
+  </section>
+  <section id="layouts" class="collection-panel" role="tabpanel" aria-labelledby="tab-layouts" tabindex="0">
+    <div class="layout-panel-heading"><div><h2>布局收藏</h2><p>按内容关系找版式，配色与文字沿用当前选择。</p></div><a href="#colors">调整文字与颜色 ↗</a></div>
   <div class="toolbar">
     <nav class="filters" aria-label="布局分类"><button class="filter" type="button" data-category="all" aria-pressed="true">全部 · 32</button><button class="filter" type="button" data-category="page" aria-pressed="false">整页结构 · 10</button><button class="filter" type="button" data-category="relation" aria-pressed="false">图文关系 · 10</button><button class="filter" type="button" data-category="module" aria-pressed="false">内容模块 · 12</button></nav>
-    <div class="actions"><label class="new-filter" id="new-layouts"><input type="checkbox" id="new-only">只看本次新增 <span id="new-count">8</span></label><label><input type="checkbox" id="favorites-only">只看收藏 <span id="favorite-count">0</span></label><button class="action primary" id="export-favorites" type="button" disabled>导出收藏清单</button></div>
+    <div class="actions"><label class="new-filter" id="new-layouts"><input type="checkbox" id="new-only">只看本次新增 <span id="new-count">8</span></label><label><input type="checkbox" id="favorites-only">只看收藏 <span id="favorite-count">0</span></label></div>
   </div>
   <div class="list-meta"><span id="result-count" aria-live="polite">32 种布局</span><span>25—32 为本次新增 · 缩略图仅示意结构，完整交互见用法说明</span></div>
   <p class="notice" id="status" role="status" aria-live="polite"></p>
   <div class="gallery" id="gallery"></div>
   <div class="empty" id="empty-state" hidden>当前筛选下没有布局。可取消「只看收藏」「只看本次新增」，或切换分类。</div>
 
-  <section class="chart-section" id="charts" aria-labelledby="charts-title">
+  </section>
+  <section class="chart-section collection-panel" id="charts" role="tabpanel" aria-labelledby="tab-charts" tabindex="0">
     <div class="chart-heading"><div><p class="eyebrow">CHART COLLECTION</p><h2 id="charts-title">把图表，也收藏起来。<span>40 种可扩展的参考</span></h2><p>先看要回答什么，再看手上有什么数据。每张图都有适用问题、需要字段、使用边界和可复制用法。</p><p>本区全部为人工构造的图型示意数据，不用于业务结论。正式报告需替换为可核验数据。</p></div><aside class="chart-choice-note">收藏表达偏好，图型仍按任务选择；不规定以后只能用这些图。<br>当前示例配色：<span id="chart-palette-name">C01 谷雨粉蓝</span><a href="#palettes">换一组喜欢的颜色 ↑</a></aside></div>
     <nav class="chart-filters" id="chart-filters" aria-label="图表分类"></nav>
     <div class="chart-controls"><label class="chart-search-label">找图表<input id="chart-search" type="search" placeholder="名称、编号或问题，如：趋势" autocomplete="off"></label><label><input id="chart-favorites-only" type="checkbox">只看图表收藏 <span id="chart-favorite-count">0</span></label><button type="button" class="action primary" id="chart-export" disabled>导出收藏清单</button></div>
@@ -322,9 +370,9 @@ Copyright 2017-2024 The Apache Software Foundation
 This product includes software developed at
 The Apache Software Foundation (https://www.apache.org/).</pre></details>
   </section>
-  <section class="help" aria-label="收藏与复用说明"><p><strong>以后可以这样说：</strong>「用 08 分屏封面开篇，正文用 01 杂志式，配色选 C02 雾粉雾蓝。」</p><p>布局、配色和图表分别收藏，保存在当前浏览器；换设备或长期留存，请导出收藏清单。清单包括当前配色、收藏色板、布局描述和图表用法，可直接交给 AI。</p><p>这些编号帮助描述布局，图表类型、章节数量、文字长度仍由任务和证据决定。示意中的行数与模块数可以增减。</p></section>
+  <section class="help" aria-label="收藏与复用说明"><p><strong>以后可以这样说：</strong>「用 08 分屏封面开篇，正文用 01 杂志式，配色选 C02 雾粉雾蓝。」</p><p>布局、配色和图表分别收藏，保存在当前浏览器；换设备或长期留存，请导出收藏清单。清单包括当前配色与文字、收藏色板、布局描述和图表用法，可直接交给 AI。</p><p>这些编号帮助描述布局，图表类型、章节数量、文字长度仍由任务和证据决定。示意中的行数与模块数可以增减。</p></section>
   <footer class="footer"><span>图形为布局示意；名称用于沟通和检索，并非唯一分类。</span><a href="#page-title">回到顶部 ↑</a></footer>
-  <noscript><p class="help">当前浏览器关闭了脚本。请打开同目录的《布局索引_给AI.md》和《配色索引_给AI.md》《图表索引_给AI.md》查看完整清单，或启用脚本使用收藏与预览。</p></noscript>
+  <noscript><p class="help">当前浏览器关闭了脚本。请打开同目录的《布局索引_给AI.md》和《配色索引_给AI.md》《图表索引_给AI.md》查看完整清单；文字与字体规则见《配色索引_给AI.md》，或启用脚本使用收藏与预览。</p></noscript>
 </main>
 
 <template id="sketch-01"><div class="s-editorial"><div><p class="s-label s-pink">EDITORIAL</p><p class="s-title">主次分明，<br>阅读有节奏。</p><div class="s-rule"></div><p class="s-label">完整论述与证据</p><div class="s-lines" aria-hidden="true"><i></i><i></i><i></i></div></div><aside><span class="s-num">01</span><p class="s-small s-blue">一句值得<br>被记住的话</p><p class="s-label">关键发现</p></aside></div></template>
@@ -411,6 +459,96 @@ The Apache Software Foundation (https://www.apache.org/).</pre></details>
 </script>
 <script type="application/json" id="chart-demo-data">
 {"category":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["类别","示例值"],"rows":[["甲",40],["乙",30],["丙",20],["丁",10]],"note":"四个互斥示例类别，合计 100。","unit":"示例单位"},"paired":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["对象","状态甲","状态乙"],"rows":[["甲",18,28],["乙",32,25],["丙",24,36]],"note":"两个状态均为示例，不代表真实前后效果或因果。","unit":"示例单位"},"signed":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["类别","有符号差值"],"rows":[["甲",12],["乙",-8],["丙",5],["丁",-3]],"note":"只演示相对零点的差值，不是同比。","unit":"示例差值"},"target":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["实际值","目标值","量程下限","量程上限"],"rows":[[64,80,0,100]],"note":"目标与量程均为教学设定；不表示真实完成率或风险。","unit":"示例单位"},"trend":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["期次","示例值"],"rows":[["期1",12],["期2",19],["期3",16],["期4",28],["期5",25],["期6",34]],"note":"六个等间距演示期间，没有实际业务时间范围。","unit":"示例单位"},"multi":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["期次","系列甲","系列乙","系列丙"],"rows":[["期1",12,8,5],["期2",18,10,7],["期3",15,13,9],["期4",25,12,10],["期5",22,16,12],["期6",29,20,15]],"note":"示意中三个系列约定为互斥、非负、可加成分。","unit":"示例单位"},"rank":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["期次","对象甲名次","对象乙名次","对象丙名次"],"rows":[["期1",1,2,3],["期2",2,1,3],["期3",3,1,2],["期4",2,3,1]],"note":"人为设定的唯一名次，无并列；名次不表示量级。","unit":"名次"},"parts":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["类别","示例量"],"rows":[["甲",40],["乙",30],["丙",20],["丁",10]],"note":"四个互斥部分，总量 100；只演示部分与整体。","unit":"示例单位"},"composition":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["组别","成分甲","成分乙","成分丙"],"rows":[["组1",20,15,5],["组2",25,10,15],["组3",30,20,10]],"note":"组内成分互斥且可加；各组总量分别为 40、50、60。","unit":"示例单位"},"bridge":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["项目","类型","数值"],"rows":[["起点","总量",60],["增加甲","变动",25],["减少乙","变动",-15],["增加丙","变动",10],["终点","总量",80]],"note":"演示恒等式：60 + 25 - 15 + 10 = 80。","unit":"示例单位"},"observations":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["观测ID","数值"],"rows":[[1,2],[2,5],[3,7],[4,10],[5,12],[6,13],[7,15],[8,18],[9,20],[10,21],[11,23],[12,25],[13,26],[14,28],[15,30],[16,33],[17,36],[18,41],[19,45],[20,48]],"note":"分箱为 [0,10)、[10,20)、[20,30)、[30,40)、[40,50]；频数 3、5、6、3、3。","unit":"示例单位"},"groups":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["观测ID","组别","数值"],"rows":[["甲-1","甲",8],["甲-2","甲",12],["甲-3","甲",15],["甲-4","甲",16],["甲-5","甲",20],["甲-6","甲",23],["甲-7","甲",26],["甲-8","甲",30],["乙-1","乙",12],["乙-2","乙",18],["乙-3","乙",20],["乙-4","乙",24],["乙-5","乙",26],["乙-6","乙",30],["乙-7","乙",34],["乙-8","乙",40],["丙-1","丙",5],["丙-2","丙",9],["丙-3","丙",12],["丙-4","丙",14],["丙-5","丙",17],["丙-6","丙",19],["丙-7","丙",21],["丙-8","丙",25]],"note":"箱线使用线性插值分位数（位置 (n−1)p）；须端为最小和最大值，不是 1.5 IQR 规则。点带的横向错位无数值含义。","unit":"示例单位"},"interval":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["对象","示意估计","示意下界","示意上界"],"rows":[["甲",24,18,31],["乙",35,28,42],["丙",19,14,25]],"note":"上下界为人为构造的示意范围，不是置信区间，不支持显著性判断。","unit":"示例单位"},"xy":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["对象","X示例值","Y示例值","大小示例值"],"rows":[["甲",12,18,8],["乙",22,30,16],["丙",30,24,10],["丁",42,48,24],["戊",50,35,12],["己",62,62,20]],"note":"每行一个虚拟对象。四象限阈值 X=35、Y=35 是教学设定。","unit":"示例单位"},"matrix":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["行","列","示例值"],"rows":[["甲","A",4],["甲","B",9],["甲","C",6],["甲","D",2],["乙","A",8],["乙","B",3],["乙","C",10],["乙","D",5],["丙","A",1],["丙","B",7],["丙","C",4],["丙","D",9]],"note":"全部 12 个格子均有示意值，不含缺失格。","unit":"示例单位"},"radar":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["对象","维度A","维度B","维度C","维度D"],"rows":[["甲",70,45,80,60],["乙",45,75,55,85],["丙",60,60,65,40]],"note":"各维 0—100 只是演示量表；没有真实评分或标准化业务结果。","unit":"示例量表值"},"funnel":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["阶段","示意对象数"],"rows":[["阶段1",100],["阶段2",65],["阶段3",35]],"note":"教学约定为同一批虚拟对象的顺序保留；不是搜索、阅读、购买的真实连接。","unit":"示例个数"},"flow":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["来源","去向","示意流量"],"rows":[["起点甲","路径甲",25],["起点甲","路径乙",15],["起点乙","路径甲",10],["起点乙","路径乙",20],["路径甲","终点甲",25],["路径甲","终点乙",10],["路径乙","终点甲",25],["路径乙","终点乙",10]],"note":"两个起点合计 70，两个内部节点各 35；两个终点为 50、20。无真实用户路径。","unit":"示例单位"},"network":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["节点甲","节点乙","关系"],"rows":[["A","B","示意连接"],["A","C","示意连接"],["B","D","示意连接"],["C","D","示意连接"],["D","E","示意连接"]],"note":"无向示意图；节点位置、大小和连接线粗细不编码权重。","unit":"不适用"},"hierarchy":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["节点ID","父节点ID","名称","示例值"],"rows":[["root","—","整体",100],["a","root","类别甲",60],["b","root","类别乙",40],["a1","a","甲一",35],["a2","a","甲二",25],["b1","b","乙一",24],["b2","b","乙二",16]],"note":"父节点值等于其直接子节点值之和；两层分类只演示层级关系。","unit":"示例单位"},"calendar":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["日期","示例值"],"rows":[["2026-01-01",10],["2026-01-02",6],["2026-01-03",2],["2026-01-04",9],["2026-01-05",5],["2026-01-06",1],["2026-01-07",8],["2026-01-08",4],["2026-01-09",0],["2026-01-10",7],["2026-01-11",3],["2026-01-12",10],["2026-01-13",6],["2026-01-14",2],["2026-01-15",9],["2026-01-16",5],["2026-01-17",1],["2026-01-18",8],["2026-01-19",4],["2026-01-20",0],["2026-01-21",7],["2026-01-22",3],["2026-01-23",10],["2026-01-24",6],["2026-01-25",2],["2026-01-26",9],["2026-01-27",5],["2026-01-28",1],["2026-01-29",8],["2026-01-30",4],["2026-01-31",0]],"note":"2026 年 1 月的日期结构是真实日历；所有数值为公式生成的示意值，每天均有记录。","unit":"示例单位"},"schedule":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["事项","开始日","结束日（不含）"],"rows":[["事项甲","2026-01-02","2026-01-08"],["事项乙","2026-01-06","2026-01-14"],["事项丙","2026-01-12","2026-01-19"]],"note":"虚构计划示意；区间为左闭右开，不表示真实任务安排或进度。","unit":"日"},"words":{"is_demo":true,"source":"人工构造的图型示意数据，不来自业务样本，不可用于报告结论","columns":["词语","示例频数"],"rows":[["留白",30],["颜色",24],["标题",20],["版式",16],["阅读",14],["图形",12],["边界",10],["节奏",8]],"note":"词频为人工设定，不来自任何真实文本。字号只用于相对浏览，不能读取为份额。","unit":"示例次数"}}
+</script>
+<script type="application/json" id="typography-data">
+{"schema_version":1,"scope":"Text and decoration only. Preserve report content and existing chart semantics.","roles":[{"id":"body","name":"正文字色","weight":400,"usage":"连续阅读的完整段落，保持清晰。"},{"id":"heading","name":"标题字色","weight":700,"usage":"章节与主要标题，建立层级。"},{"id":"secondary","name":"说明字色","weight":400,"usage":"补充解释、来源与图注，字号和对比度仍须可读。"},{"id":"emphasis","name":"重点字色","weight":500,"usage":"少量关键词用颜色强调，颜色不替代论据。"},{"id":"strong","name":"加粗字色","weight":700,"usage":"用 strong 标出重要语句；加粗与换色可以独立使用。"},{"id":"highlightBg","name":"Highlight 底色","weight":400,"usage":"短词句的标记背景，配合独立的高亮字色。"},{"id":"highlightText","name":"Highlight 字色","weight":400,"usage":"mark 内的文字，须与高亮底色搭配可读。"},{"id":"link","name":"链接字色","weight":400,"usage":"实际可点击的链接，保留下划线和键盘焦点。"}],"fonts":[{"id":"system","name":"清晰黑体","sample":"清楚地表达","body":"-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif","heading":"-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif","numbers":"inherit","usage":"标题与正文使用系统无衬线字体，数字采用等宽数字特性。"},{"id":"editorial","name":"宋体标题","sample":"留白与节奏","body":"-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif","heading":"'Songti SC', 'STSong', 'Noto Serif CJK SC', ui-serif, serif","numbers":"inherit","usage":"标题使用宋体或系统衬线回退，正文维持清晰黑体。"},{"id":"numeric","name":"数字等宽","sample":"0123 · 4567","body":"-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif","heading":"-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif","numbers":"ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace","usage":"中文维持黑体，数字与编码使用等宽字体，方便比较与对齐。"}],"defaults":{"body":"#273445","body_size_px":16,"body_line_height":1.75,"heading_weight":700,"strong_weight":700,"emphasis_weight":500,"highlight_white_mix":0.88,"minimum_text_contrast":4.5},"rules":["文字设置按色板分别保留；正文、重点、加粗与高亮不是同一个颜色角色。","默认由当前色板生成文字色；自选值保留为偏好，实际文字色在必要时调整到与参考背景至少 4.5:1。复制与导出记录实际使用值。","Highlight 使用 mark，重要语句使用 strong；只用于标记用户指定或有依据的重点，不改写结论或补造证据。","字体依赖设备可用字体与给出的回退序列；不嵌入或下载外部字体。","作用域限制在报告文字和示意预览；不得覆盖已有图表颜色映射、数据、坐标轴、图例或交互。"],"references":[{"title":"W3C · Contrast minimum","url":"https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"},{"title":"MDN · mark","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/mark"}]}
+</script>
+<script id="collection-tabs-runtime">
+/* Stable fragment routing. Panels are hidden, not removed, to preserve state. */
+(() => {
+  'use strict';
+  const tabs=[...document.querySelectorAll('.collection-tab')];
+  const panels=tabs.map(t=>document.getElementById(t.getAttribute('aria-controls')));
+  const start=document.getElementById('collection-start');
+  let active='layouts',printState=null;
+  function panelForHash(hash){if(hash==='#charts'||/^#chart-T\d{2}$/.test(hash))return 'charts';if(['#palettes','#typography','#colors'].includes(hash))return 'colors';if(['#layouts','#new-layouts'].includes(hash)||/^#layout-\d{2}$/.test(hash))return 'layouts';return null;}
+  function show(id,{focus=false,scroll=false}={}){
+    if(!panels.some(p=>p.id===id))return;
+    active=id;
+    tabs.forEach(tab=>{const on=tab.getAttribute('aria-controls')===id;tab.setAttribute('aria-selected',String(on));tab.tabIndex=on?0:-1;if(on&&focus)tab.focus({preventScroll:true});});
+    panels.forEach(panel=>panel.hidden=panel.id!==id);
+    if(id==='colors')document.getElementById('palettes').open=true;
+    document.documentElement.dataset.collectionTab=id;
+    document.dispatchEvent(new CustomEvent('collection:tab-change',{detail:{tab:id}}));
+    if(scroll)window.scrollTo({top:Math.max(0,start.getBoundingClientRect().top+window.scrollY),behavior:'instant'});
+  }
+  const tabHash={layouts:'#layouts',colors:'#colors',charts:'#charts'};
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{const id=tab.getAttribute('aria-controls');if(location.hash!==tabHash[id])history.pushState(null,'',tabHash[id]);show(id,{scroll:true});});
+    tab.addEventListener('keydown',e=>{let index=tabs.indexOf(tab);if(e.key==='ArrowRight')index=(index+1)%tabs.length;else if(e.key==='ArrowLeft')index=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')index=0;else if(e.key==='End')index=tabs.length-1;else return;e.preventDefault();const id=tabs[index].getAttribute('aria-controls');if(location.hash!==tabHash[id])history.pushState(null,'',tabHash[id]);show(id,{focus:true,scroll:true});});
+  });
+  function route(){const id=panelForHash(location.hash);if(id)show(id);}
+  // Registered before other hash handlers so their target is visible before scrolling.
+  window.addEventListener('hashchange',route);window.addEventListener('popstate',route);
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const hash=a.getAttribute('href'),id=panelForHash(hash);if(!id)return;show(id);if(location.hash===hash)requestAnimationFrame(()=>document.getElementById(hash.slice(1))?.scrollIntoView({block:'start',behavior:'instant'}));});
+  window.addEventListener('beforeprint',()=>{printState=active;panels.forEach(p=>p.hidden=false);document.dispatchEvent(new CustomEvent('collection:tab-change',{detail:{tab:'print'}}));});
+  window.addEventListener('afterprint',()=>{if(printState){show(printState);printState=null;}});
+  window.CollectionTabs={show:id=>show(id),active:()=>active};
+  show(panelForHash(location.hash)||'layouts');
+})();
+
+</script>
+<script id="typography-runtime">
+/* Typography is an independent, per-palette preference. It never owns chart data. */
+(() => {
+  'use strict';
+  const spec=JSON.parse(document.getElementById('typography-data').textContent);
+  const presets=JSON.parse(document.getElementById('palette-data').textContent);
+  const key='shelley-html-typography-v1',profiles=new Map(),roleIds=spec.roles.map(r=>r.id);
+  let current=presets[0],storageOK=true,isFavorite=false;
+  const isHex=v=>typeof v==='string'&&/^#[0-9a-f]{6}$/i.test(v);
+  const validId=id=>presets.some(p=>p.id===id)||/^custom-[a-z0-9-]{1,72}$/.test(id);
+  const make=(tag,cls,text)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(text!==undefined)el.textContent=text;return el;};
+  const mix=(a,b,t)=>'#'+[1,3,5].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-t)+parseInt(b.slice(i,i+2),16)*t).toString(16).padStart(2,'0')).join('');
+  const luminance=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);
+  const ratio=(a,b)=>{const x=luminance(a),y=luminance(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05);};
+  function readable(color,bgs){if(bgs.every(bg=>ratio(color,bg)>=4.5))return color;for(let step=1;step<=100;step++)for(const target of['#000000','#ffffff']){const c=mix(color,target,step/100);if(bgs.every(bg=>ratio(c,bg)>=4.5))return c;}return ['#000000','#ffffff'].sort((a,b)=>Math.min(...bgs.map(bg=>ratio(b,bg)))-Math.min(...bgs.map(bg=>ratio(a,bg))))[0];}
+  function rawValues(p){return{body:'#273445',heading:p.heading,secondary:p.explain,emphasis:p.accent,strong:p.heading,highlightBg:mix(p.accent,'#ffffff',.88),highlightText:p.heading,link:p.secondary,...(profiles.get(p.id)?.colors||{})};}
+  function values(p){const raw=rawValues(p),bgs=['#ffffff','#fafbfc',p.start,p.end,p.softStart,p.softEnd],v={};roleIds.forEach(id=>v[id]=id==='highlightBg'?raw[id]:readable(raw[id],id==='highlightText'?[raw.highlightBg]:bgs));v.font=spec.fonts.find(f=>f.id===profiles.get(p.id)?.font)||spec.fonts[0];v.adjusted=roleIds.filter(id=>v[id]!==raw[id]);return v;}
+  try{const saved=JSON.parse(localStorage.getItem(key)||'null');if(saved?.version===1&&saved.profiles&&typeof saved.profiles==='object'&&!Array.isArray(saved.profiles)){Object.entries(saved.profiles).slice(0,200).forEach(([id,v])=>{if(!validId(id)||!v||typeof v!=='object')return;const colors={};roleIds.forEach(k=>{if(isHex(v.colors?.[k]))colors[k]=v.colors[k].toLowerCase();});const font=spec.fonts.some(f=>f.id===v.font)?v.font:'system';profiles.set(id,{font,colors});});}}catch(e){storageOK=false;}
+  function announce(text){document.getElementById('type-status').textContent=text;}
+  function remember(){try{localStorage.setItem(key,JSON.stringify({version:1,profiles:Object.fromEntries(profiles)}));}catch(e){storageOK=false;}if(!storageOK)announce('这里无法保存文字设置；本页仍可预览，请复制或导出留存。');}
+  function change(field,value){const profile=profiles.get(current.id)||{font:'system',colors:{}};if(field==='font')profile.font=value;else profile.colors[field]=value;profiles.set(current.id,profile);remember();document.dispatchEvent(new Event('collection:typography-change'));if(storageOK)announce('已记住「'+current.name+'」的文字设置，预览与 AI 描述已更新。');}
+  const fields=document.getElementById('type-color-fields');
+  spec.roles.forEach(role=>{
+    const label=make('label','type-field');label.htmlFor='type-color-'+role.id;label.append(make('span','type-field-name',role.name));
+    const row=make('span','type-field-control'),input=make('input');input.id='type-color-'+role.id;input.type='color';input.addEventListener('input',()=>change(role.id,input.value));const hex=make('span','type-field-hex');hex.id='type-hex-'+role.id;row.append(input,hex);label.append(row);const note=make('span','type-adjustment');note.id='type-adjust-'+role.id;label.append(note);fields.append(label);
+  });
+  const fonts=document.getElementById('type-fonts');spec.fonts.forEach(font=>{const label=make('label','type-font');const input=make('input');input.type='radio';input.name='type-font';input.value=font.id;input.addEventListener('change',()=>{if(input.checked)change('font',font.id);});const body=make('span');body.append(make('strong','',font.name));const sample=make('span','type-font-sample',font.sample);sample.style.fontFamily=font.id==='numeric'?font.numbers:font.heading;body.append(sample);label.append(input,body);fonts.append(label);});
+  function setVars(el,v){Object.entries(v).filter(([k])=>roleIds.includes(k)).forEach(([k,color])=>el.style.setProperty('--type-'+k,color));el.style.setProperty('--type-font-body',v.font.body);el.style.setProperty('--type-font-heading',v.font.heading);el.style.setProperty('--type-font-numbers',v.font.numbers);}
+  function render(){
+    const v=values(current),raw=rawValues(current);setVars(document.getElementById('type-preview'),v);
+    roleIds.forEach(id=>{document.getElementById('type-color-'+id).value=raw[id];document.getElementById('type-hex-'+id).textContent=v[id];document.getElementById('type-adjust-'+id).textContent=v.adjusted.includes(id)?'已调亮度，右侧为使用色':'使用色';});
+    fonts.querySelectorAll('input').forEach(input=>input.checked=input.value===v.font.id);
+    document.getElementById('type-current').textContent=current.code+' '+current.name;
+    const save=document.getElementById('type-save');save.textContent=isFavorite?'★ 这组配色已收藏':'☆ 收藏这组文字与配色';save.setAttribute('aria-pressed',String(isFavorite));
+    document.getElementById('type-reset').disabled=!profiles.has(current.id);
+    document.getElementById('type-summary').value=describe(current);
+  }
+  function describe(p){const v=values(p);return '文字方案：'+v.font.name+'。正文 font-family: '+v.font.body+'；标题 font-family: '+v.font.heading+'；数字字体 '+v.font.numbers+'，font-variant-numeric: tabular-nums。正文建议 16px / 1.75，手机不因内容过多而缩小字号。\n文字角色：'+spec.roles.map(r=>r.name+' '+v[r.id]+(r.id==='highlightBg'?'':'（字重 '+r.weight+'）')).join('；')+'。\n正文、重点色、加粗与 Highlight 分开使用。重要语句使用 strong（700）；高亮使用 mark，背景 '+v.highlightBg+'、文字 '+v.highlightText+'；真实链接保留下划线和可见焦点。以上为实际使用色；为当前白底与浅色底选择了可读文字色，高亮字色另与其底色匹配。'+(v.adjusted.length?'部分自选或强调原色已调整亮度，以保证正文可读。':'')+'换背景后重新检查对比度。只强调有依据或用户指定的重点，保留完整内容、来源与语义；不把强调色当数据编码，不改已有图表的数据、颜色含义和交互。';}
+  async function copy(){const text=document.getElementById('palette-prompt').value||describe(current),area=document.getElementById('type-summary');area.value=text;try{if(!navigator.clipboard)throw Error();await navigator.clipboard.writeText(text);announce('文字与配色说明已复制，可以交给 AI。');}catch(e){area.closest('details').open=true;area.focus();area.select();let ok=false;try{ok=document.execCommand('copy');}catch(ignore){}announce(ok?'文字与配色说明已复制。':'文字已选中，请按 ⌘C 或 Ctrl+C 复制。');}}
+  document.getElementById('copy-type').addEventListener('click',copy);
+  document.getElementById('type-save').addEventListener('click',()=>document.dispatchEvent(new Event('collection:save-typography')));
+  document.getElementById('type-reset').addEventListener('click',()=>{profiles.delete(current.id);remember();document.dispatchEvent(new Event('collection:typography-change'));if(storageOK)announce('已恢复当前色板的默认文字与字体方案。');});
+  window.CollectionTypography={
+    values,describe,
+    setPalette:(p,saved)=>{current=p;isFavorite=!!saved;render();},
+    styleLayouts:(gallery,p)=>{const v=values(p);gallery.querySelectorAll('.sketch').forEach(el=>{setVars(el,v);el.style.setProperty('--ink',v.body);el.style.setProperty('--pink',v.heading);el.style.setProperty('--blue',v.secondary);el.style.setProperty('--muted',v.secondary);});},
+    notify:announce
+  };
+  render();if(!storageOK)announce('这里无法保存文字设置；本页仍可预览，请复制或导出留存。');
+})();
+
 </script>
 <script id="echarts-offline-vendor">
 
@@ -611,7 +749,7 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
     chart.resize();plot.dataset.palette=palette.id;plot.dataset.rendered='true';
   }
   const observer='IntersectionObserver'in window?new IntersectionObserver(list=>{for(const hit of list)if(hit.isIntersecting){const r=records.get(hit.target.dataset.chartId);if(r)render(r);}},{rootMargin:'250px 0px'}):null;
-  const resizer='ResizeObserver'in window?new ResizeObserver(list=>{for(const hit of list){const r=records.get(hit.target.dataset.chartId);if(!r||r.card.hidden)continue;if(instances.has(r.item.id))instances.get(r.item.id).resize();}}):null;
+  const resizer='ResizeObserver'in window?new ResizeObserver(list=>{for(const hit of list){const r=records.get(hit.target.dataset.chartId);if(!r||r.card.hidden||!r.plot.clientWidth)continue;if(instances.has(r.item.id))instances.get(r.item.id).resize();}}):null;
   function renderVisible(){for(const r of records.values()){const rect=r.plot.getBoundingClientRect();if(!r.card.hidden&&rect.bottom>-250&&rect.top<innerHeight+250)render(r);}}
   entries.forEach(item=>{
     const d=fixtures[item.demoKey],card=make('article','chart-card');card.id='chart-'+item.id;card.dataset.id=item.id;card.dataset.family=item.family;card.setAttribute('aria-labelledby','chart-title-'+item.id);
@@ -638,6 +776,7 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
   document.getElementById('chart-export').addEventListener('click',()=>document.getElementById('export-favorites').click());
   function reveal(){const linked=location.hash.match(/^#chart-(T\d{2})$/);if(linked&&valid.has(linked[1])){family='all';search.value='';savedOnly.checked=false;update();const r=records.get(linked[1]);r.card.querySelector('.chart-usage').open=true;r.card.scrollIntoView({block:'start',behavior:'instant'});render(r);}else if(location.hash==='#charts'){document.getElementById('charts').scrollIntoView({block:'start',behavior:'instant'});requestAnimationFrame(renderVisible);}}
   window.addEventListener('hashchange',reveal);window.addEventListener('beforeprint',()=>{for(const r of records.values())if(!r.card.hidden)render(r);});
+  document.addEventListener('collection:tab-change',()=>requestAnimationFrame(renderVisible));
   if(!observer)window.addEventListener('scroll',renderVisible,{passive:true});
   window.ChartCatalogue={
     favoriteCount:()=>favorites.size,
@@ -671,7 +810,7 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
   const newOnly=document.getElementById('new-only');
   const exportButton=document.getElementById('export-favorites');
   const paletteTextarea=document.getElementById('palette-prompt');
-  function announce(text){status.textContent=text;document.getElementById('palette-status').textContent=text;}
+  function announce(text){status.textContent=text;document.getElementById('palette-status').textContent=text;document.getElementById('global-status').textContent=text;}
   function make(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el;}
   function isHex(value){return typeof value==='string'&&/^#[0-9a-f]{6}$/i.test(value);}
   function mix(a,b,amount){const channel=i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-amount)+parseInt(b.slice(i,i+2),16)*amount).toString(16).padStart(2,'0');return '#'+[1,3,5].map(channel).join('');}
@@ -703,7 +842,7 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
     if(!storageOK)announce('这里暂时不能记住收藏，请导出清单留存。');
   }
   function gradient(p){return 'linear-gradient('+p.angle+'deg, '+p.start+', '+p.end+')';}
-  function colorDescription(p){return '配色采用「'+p.code+' '+p.name+'」。强调色 '+p.accent+'，辅助色 '+p.secondary+'；标题 '+p.heading+'，解释文字 '+p.explain+'，正文 #273445，页面底色 #fafbfc，内容面板 #ffffff，分隔线 #e8ebf0。浅底渐变 '+gradient(p)+'；更浅的辅助底 linear-gradient(135deg, '+p.softStart+', '+p.softEnd+')；装饰细线 linear-gradient(90deg, '+p.lineStart+', '+p.lineEnd+')。'+p.usage;}
+  function colorDescription(p){return '配色采用「'+p.code+' '+p.name+'」。装饰强调色 '+p.accent+'，辅助色 '+p.secondary+'；页面底色 #fafbfc，内容面板 #ffffff，分隔线 #e8ebf0。浅底渐变 '+gradient(p)+'；更浅的辅助底 linear-gradient(135deg, '+p.softStart+', '+p.softEnd+')；装饰细线 linear-gradient(90deg, '+p.lineStart+', '+p.lineEnd+')。'+p.usage+'\n'+window.CollectionTypography.describe(p);}
   const boundary='配色只作用于页面排版和装饰。正文、标题与图例必须清晰可读；强调色不直接替代长段正文色。图表类型由问题与数据决定；保留已有图表的系列颜色含义、数据、单位、口径、来源、坐标轴、图例、visualMap 与交互，不批量覆盖现有图表配置。新增图表单独按数据选择配色，不把装饰渐变当作数值编码。';
   function palettePrompt(p){return colorDescription(p)+'\n'+boundary;}
   function promptFor(item){return '请采用「'+item.id+' '+item.name+'」布局。'+item.prompt+'\n'+colorDescription(currentPalette())+'\n'+item.mobile+'完整保留内容、数据、单位、口径、来源和已有图表交互；不要照搬示意的模块数或图型，不要补造数据。'+boundary;}
@@ -731,12 +870,16 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
     document.getElementById('empty-state').hidden=visible!==0;
     exportButton.disabled=favorites.size===0&&paletteFavorites.size===0&&window.ChartCatalogue.favoriteCount()===0;
     window.ChartCatalogue.setExportEnabled(!exportButton.disabled);
+    document.getElementById('collection-count').textContent='已收藏：'+favorites.size+' 布局 · '+paletteFavorites.size+' 配色 · '+window.ChartCatalogue.favoriteCount()+' 图表';
   }
   function applyPalette(){
     const p=currentPalette();
+    window.CollectionTypography.setPalette(p,paletteFavorites.has(p.id));
     const vars={'--ink':'#273445','--pink':p.heading,'--blue':p.explain,'--grad':gradient(p),'--air':'linear-gradient(135deg, '+p.softStart+', '+p.softEnd+')','--cloud':'linear-gradient(135deg, '+mix(p.softStart,'#ffffff',0.5)+', '+mix(p.softEnd,'#ffffff',0.5)+')','--preview-accent':p.accent,'--preview-line':'linear-gradient(90deg, '+p.lineStart+', '+p.lineEnd+')','--preview-soft-line':mix(p.secondary,'#ffffff',0.75),'--preview-first':'linear-gradient(180deg, '+p.start+', #ffffff)','--preview-second':'linear-gradient(180deg, '+p.end+', #ffffff)'};
     gallery.querySelectorAll('.sketch').forEach(sketch=>{Object.entries(vars).forEach(([key,value])=>sketch.style.setProperty(key,value));sketch.dataset.palette=p.id;});
     layouts.forEach(item=>{document.querySelector('#layout-'+item.id+' textarea').value=promptFor(item);});
+    window.CollectionTypography.styleLayouts(gallery,p);
+    document.getElementById('collection-palette').textContent=p.code+' '+p.name;
     paletteTextarea.value=palettePrompt(p);
     window.ChartCatalogue.setPalette(p,colorDescription(p));
     document.getElementById('palette-summary').textContent='当前：'+p.code+' '+p.name+' · 已收藏 '+paletteFavorites.size+' 组';
@@ -787,6 +930,8 @@ var Fr={},Gr={};var Wr,Hr=function(){function t(t,e,n){var i=this;this._sleepAft
     const blob=new Blob(['\uFEFF'+lines.join('\n')],{type:'text/markdown;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='我的HTML布局收藏_'+date+'.md';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),20000);announce('已生成 '+selected.length+' 种布局、'+savedPalettes.length+' 组收藏配色、'+window.ChartCatalogue.favoriteCount()+' 种图表参考的清单。');
   });
   document.addEventListener('collection:chart-favorites',update);
+  document.addEventListener('collection:typography-change',applyPalette);
+  document.addEventListener('collection:save-typography',()=>{const p=currentPalette();if(paletteFavorites.has(p.id))paletteFavorites.delete(p.id);else paletteFavorites.add(p.id);rememberPalettes();applyPalette();window.CollectionTypography.notify(paletteFavorites.has(p.id)?'已收藏这组文字与配色，可以一起导出。':'已取消收藏；文字设置仍保留在当前浏览器。');});
   renderPalettes();applyPalette();
   if(!storageOK)announce('这里暂时不能记住收藏，请导出清单留存。');
   function revealLinkedLayout(){
