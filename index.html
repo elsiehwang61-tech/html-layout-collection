@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="data:,">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>雪莉的 HTML 布局收藏册 · 24 种版式</title>
+  <title>雪莉的 HTML 布局收藏册 · 32 种版式</title>
   <style>
     :root{color-scheme:light;--ink:#273445;--muted:#687386;--pink:#ad1457;--pink-main:#ec407a;--blue:#4076a5;--line:#e8ebf0;--ground:#fafbfc;--paper:#fff;--grad:linear-gradient(135deg,#fce4ec,#e3f2fd);--air:linear-gradient(135deg,#fff7fb,#eef7ff);--cloud:linear-gradient(135deg,#fffafd,#f6fbff)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ground);color:var(--ink);font:14px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}button,textarea{font:inherit}button{cursor:pointer}a{color:var(--blue);text-underline-offset:3px}button:focus-visible,a:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #4b91df;outline-offset:3px}[hidden]{display:none!important}button:disabled{cursor:default;opacity:.45}
@@ -28,14 +28,25 @@
     @media print{.palette-shelf{display:none!important}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     @media print{body{background:white}.page{max-width:none;padding:0}.hero{padding:20px;margin-bottom:16px}.hero h1{font-size:30px}.toolbar,.list-meta,.notice,.mark,.description,.help,.footer{display:none!important}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.layout-card{break-inside:avoid;box-shadow:none}.sketch{height:220px}}
+    /* 25—32：自绘结构示意，不包含业务数据；交互要求写入对应复用描述。 */
+    .new-entry{display:inline-block;margin-top:12px;padding:5px 12px;border:1px solid #dcbfd2;border-radius:999px;font-size:12px;background:rgba(255,255,255,.55);color:var(--pink);text-decoration:none}.new-filter{scroll-margin-top:20px}.card-new{font-weight:600}.reference-links{font-size:11px;color:var(--muted)}.reference-links a{display:inline-block;margin-right:10px}.sketch .s-chip{display:inline-block;border:1px solid var(--preview-soft-line);border-radius:999px;padding:2px 7px;color:var(--blue);font-size:10px;line-height:1.5}
+    .s-brief{display:grid;grid-template-rows:auto 1fr auto;gap:10px;height:100%}.s-brief header{background:var(--air);border-radius:7px;padding:10px 12px;border-left:3px solid var(--preview-accent)}.s-brief header .s-title{font-size:21px}.s-brief .brief-body{display:grid;grid-template-columns:1.2fr 1fr;gap:10px}.s-brief .brief-body>div{padding:7px 10px;border:1px solid var(--line);border-radius:6px}.s-brief footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:7px;font-size:11px;color:var(--blue)}
+    .s-master{display:grid;grid-template-columns:.8fr 1.25fr;gap:11px;height:100%}.s-master aside{display:grid;align-content:start;gap:8px;border-right:1px solid var(--line);padding-right:10px}.s-master aside>div{font-size:11px;line-height:1.6;padding:8px;border:1px solid var(--line);border-radius:6px}.s-master aside .selected{background:var(--air);border-color:var(--preview-soft-line);color:var(--pink)}.s-master article{display:flex;flex-direction:column;gap:9px;min-width:0}.s-master .s-media{flex:1;min-height:60px}.s-master .s-title{font-size:19px}.s-master .s-lines{margin-top:0}
+    .s-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;height:100%}.s-options>div{border:1px solid var(--line);border-radius:7px;overflow:hidden;min-width:0}.s-options header{background:var(--air);padding:10px 8px;font-size:13px;color:var(--pink);font-weight:600}.s-options dl{margin:0;padding:7px 8px;display:grid;gap:7px}.s-options dt{font-size:10px;color:var(--muted)}.s-options dd{margin:1px 0 0;font-size:11px;line-height:1.45;color:var(--ink)}
+    .s-annotated{display:grid;grid-template-columns:1.15fr 1fr;gap:13px;height:100%}.s-annotated .figure{position:relative;border-radius:7px;background:var(--air);display:grid;place-items:center;min-width:0}.s-annotated .figure-sheet{height:110px;width:65%;border:1px solid var(--preview-soft-line);border-radius:9px;background:white;display:grid;place-content:center;text-align:center;gap:10px;color:var(--blue);font-size:11px}.s-annotated .pin{position:absolute;width:24px;height:24px;display:grid;place-items:center;background:white;color:var(--pink);border:1px solid var(--preview-accent);border-radius:50%;font-size:11px}.s-annotated .pin-a{left:12%;top:17%}.s-annotated .pin-b{right:9%;bottom:24%}.s-annotated .pin:after{content:'';position:absolute;left:22px;top:11px;width:20px;border-top:1px solid var(--preview-accent)}.s-annotated .pin-b:after{left:auto;right:22px}.s-annotated aside{display:grid;align-content:center;gap:20px}.s-annotated aside p{font-size:11px;color:var(--muted);line-height:1.65}.s-annotated aside b{display:block;font-weight:500;color:var(--blue);margin-bottom:4px}
+    .s-tabs{height:100%;display:grid;grid-template-rows:auto auto 1fr;gap:11px}.s-tabs .s-title{font-size:20px}.s-tabs .tab-strip{display:flex;border-bottom:1px solid var(--line);gap:12px;font-size:11px;color:var(--muted)}.s-tabs .tab-strip span{padding:4px 2px 7px}.s-tabs .tab-strip .active{border-bottom:2px solid var(--preview-accent);color:var(--pink)}.s-tabs .tab-pane{border-radius:7px;background:var(--air);padding:12px;display:flex;flex-direction:column;justify-content:space-between;gap:9px}.s-tabs .tab-pane .s-lines{margin-top:4px}
+    .s-accordion{height:100%;display:grid;align-content:start;gap:8px}.s-accordion .always{padding:8px 10px;border-radius:6px;background:var(--air);font-size:13px;color:var(--pink)}.s-accordion .fold{border-bottom:1px solid var(--line);padding:5px 2px}.s-accordion .fold-label{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--blue)}.s-accordion .fold-body{padding:7px 0;font-size:11px;color:var(--muted)}.s-accordion .s-lines{margin-top:4px;gap:5px}
+    .s-facts{height:100%}.s-facts header{display:flex;align-items:center;gap:11px;padding:0 0 11px;border-bottom:1px solid var(--line)}.s-facts .avatar{width:39px;height:39px;background:var(--grad);border-radius:9px;display:grid;place-items:center;font-size:18px;color:var(--pink)}.s-facts header .s-title{font-size:19px}.s-facts dl{margin:4px 0 0}.s-facts dl>div{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:11px;line-height:1.55}.s-facts dt{color:var(--muted)}.s-facts dd{margin:0;color:var(--blue)}
+    .s-board{height:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.s-board>section{background:var(--cloud);border:1px solid var(--line);border-radius:6px;padding:8px 6px;min-width:0}.s-board header{font-size:11px;color:var(--blue);border-bottom:2px solid var(--preview-soft-line);padding-bottom:6px;margin-bottom:9px}.s-board .task{font-size:11px;line-height:1.6;background:white;border:1px solid var(--line);border-radius:5px;padding:8px 6px;margin-bottom:8px}.s-board .task small{display:block;margin-top:6px;color:var(--muted);font-size:10px}
+    @media(max-width:640px){.s-brief header .s-title{font-size:19px}.s-master{gap:9px}.s-master aside{padding-right:8px}.s-master .s-title{font-size:17px}.s-options{gap:6px}.s-options header{padding:9px 6px;font-size:12px}.s-options dl{padding:7px 6px;gap:7px}.s-annotated{gap:10px}.s-annotated .pin{width:22px;height:22px}.s-board{gap:6px}.s-board>section{padding:8px 5px}.s-board .task{padding:7px 5px}.actions .new-filter{width:100%;padding-top:3px}}
   </style>
 </head>
 <body>
 <main class="page" id="layout-library">
-  <header class="masthead"><div class="brand">雪莉的版式收藏册</div><div class="edition">VOL. 01 · 2026.09.16</div></header>
+  <header class="masthead"><div class="brand">雪莉的版式收藏册</div><div class="edition">VOL. 01 · 2026.09.17</div></header>
   <section class="hero" aria-labelledby="page-title">
-    <div><p class="eyebrow">LAYOUT COLLECTION</p><h1 id="page-title">把喜欢的版式，<br><span>先收藏起来。</span></h1><p>24 种布局，按内容关系挑选。<br>整页怎么展开，图文怎么搭配，重点怎么被看见。</p></div>
-    <div class="hero-note"><strong>喜欢的版式，配上喜欢的颜色。</strong><p>先选配色，再看 24 种布局的效果。<br>展开卡片，一起复制给 AI。</p></div>
+    <div><p class="eyebrow">LAYOUT COLLECTION</p><h1 id="page-title">把喜欢的版式，<br><span>先收藏起来。</span></h1><p>32 种布局，按内容关系挑选。<br>整页怎么展开，图文怎么搭配，重点怎么被看见。</p></div>
+    <div class="hero-note"><strong>喜欢的版式，配上喜欢的颜色。</strong><p>先选配色，再看 32 种布局的效果。<br>展开卡片，一起复制给 AI。</p><a class="new-entry" href="#new-layouts">看看新增的 8 种布局 ↗</a></div>
   </section>
   <details class="palette-shelf" id="palettes" open>
     <summary>配色收藏 <span class="palette-summary" id="palette-summary">谷雨粉蓝 · 可切换预览</span></summary>
@@ -57,16 +68,16 @@
     </div>
   </details>
   <div class="toolbar">
-    <nav class="filters" aria-label="布局分类"><button class="filter" type="button" data-category="all" aria-pressed="true">全部 · 24</button><button class="filter" type="button" data-category="page" aria-pressed="false">整页结构 · 8</button><button class="filter" type="button" data-category="relation" aria-pressed="false">图文关系 · 8</button><button class="filter" type="button" data-category="module" aria-pressed="false">内容模块 · 8</button></nav>
-    <div class="actions"><label><input type="checkbox" id="favorites-only">只看收藏 <span id="favorite-count">0</span></label><button class="action primary" id="export-favorites" type="button" disabled>导出收藏清单</button></div>
+    <nav class="filters" aria-label="布局分类"><button class="filter" type="button" data-category="all" aria-pressed="true">全部 · 32</button><button class="filter" type="button" data-category="page" aria-pressed="false">整页结构 · 10</button><button class="filter" type="button" data-category="relation" aria-pressed="false">图文关系 · 10</button><button class="filter" type="button" data-category="module" aria-pressed="false">内容模块 · 12</button></nav>
+    <div class="actions"><label class="new-filter" id="new-layouts"><input type="checkbox" id="new-only">只看本次新增 <span id="new-count">8</span></label><label><input type="checkbox" id="favorites-only">只看收藏 <span id="favorite-count">0</span></label><button class="action primary" id="export-favorites" type="button" disabled>导出收藏清单</button></div>
   </div>
-  <div class="list-meta"><span id="result-count" aria-live="polite">24 种布局</span><span>结构示意 · 不包含业务数据 · 前 6 种为上次介绍</span></div>
+  <div class="list-meta"><span id="result-count" aria-live="polite">32 种布局</span><span>25—32 为本次新增 · 缩略图仅示意结构，完整交互见用法说明</span></div>
   <p class="notice" id="status" role="status" aria-live="polite"></p>
   <div class="gallery" id="gallery"></div>
-  <div class="empty" id="empty-state" hidden>这个分类还没有收藏。可以切回全部，继续挑选。</div>
+  <div class="empty" id="empty-state" hidden>当前筛选下没有布局。可取消「只看收藏」「只看本次新增」，或切换分类。</div>
   <section class="help" aria-label="收藏与复用说明"><p><strong>以后可以这样说：</strong>「用 08 分屏封面开篇，正文用 01 杂志式，配色选 C02 雾粉雾蓝。」</p><p>布局和配色分别收藏，保存在当前浏览器；换设备或长期留存，请导出收藏清单。清单包括当前配色、收藏色板和布局描述，可直接交给 AI。</p><p>这些编号帮助描述布局，图表类型、章节数量、文字长度仍由任务和证据决定。示意中的行数与模块数可以增减。</p></section>
   <footer class="footer"><span>图形为布局示意；名称用于沟通和检索，并非唯一分类。</span><a href="#page-title">回到顶部 ↑</a></footer>
-  <noscript><p class="help">当前浏览器关闭了脚本。请打开同目录的《布局索引_给AI.md》查看完整清单，或启用脚本使用收藏与预览。</p></noscript>
+  <noscript><p class="help">当前浏览器关闭了脚本。请打开同目录的《布局索引_给AI.md》和《配色索引_给AI.md》查看完整清单，或启用脚本使用收藏与预览。</p></noscript>
 </main>
 
 <template id="sketch-01"><div class="s-editorial"><div><p class="s-label s-pink">EDITORIAL</p><p class="s-title">主次分明，<br>阅读有节奏。</p><div class="s-rule"></div><p class="s-label">完整论述与证据</p><div class="s-lines" aria-hidden="true"><i></i><i></i><i></i></div></div><aside><span class="s-num">01</span><p class="s-small s-blue">一句值得<br>被记住的话</p><p class="s-label">关键发现</p></aside></div></template>
@@ -93,6 +104,15 @@
 <template id="sketch-22"><div class="s-orbit"><div class="node a">维度一</div><div class="node b">维度二</div><div class="node core">核心<br>命题</div><div class="node c">维度三</div><div class="node d">维度四</div></div></template>
 <template id="sketch-23"><div class="s-timeline"><div><time>阶段一</time><section class="s-box"><p>起点与背景</p><p class="s-label">事实、材料与时间</p></section></div><div><time>阶段二</time><section class="s-box"><p>变化与转折</p><p class="s-label">事实、材料与时间</p></section></div><div><time>阶段三</time><section class="s-box"><p>当前状态</p><p class="s-label">事实、材料与时间</p></section></div></div></template>
 <template id="sketch-24"><div class="s-divider"><span class="s-num">02</span><div><p class="s-label s-pink">CHAPTER</p><p class="s-title">换一个章节，<br>换一口呼吸。</p><div class="s-rule"></div><p class="s-label">本章命题与一句导语</p></div></div></template>
+
+<template id="sketch-25"><div class="s-brief"><header><p class="s-label s-pink">DECISION BRIEF</p><p class="s-title">先让判断被看见。</p></header><div class="brief-body"><div><p class="s-small s-blue">关键依据</p><div class="s-lines" aria-hidden="true"><i></i><i></i><i></i></div></div><div><p class="s-small s-pink">适用边界</p><div class="s-lines" aria-hidden="true"><i></i><i></i></div></div></div><footer><span>接下来做什么</span><span>完整材料 ↗</span></footer></div></template>
+<template id="sketch-26"><div class="s-master"><aside><p class="s-label">案例目录</p><div class="selected">案例 A<br>当前阅读</div><div>案例 B<br>主题摘要</div><div>案例 C<br>主题摘要</div></aside><article><p class="s-title">展开一个<br>完整案例。</p><div class="s-media">案例主视觉</div><div class="s-lines" aria-hidden="true"><i></i><i></i></div><p class="s-label">判断 · 材料 · 来源</p></article></div></template>
+<template id="sketch-27"><div class="s-options"><div><header>方案 A</header><dl><div><dt>适合</dt><dd>适用情境</dd></div><div><dt>依据</dt><dd>对应材料</dd></div><div><dt>代价</dt><dd>投入条件</dd></div></dl></div><div><header>方案 B</header><dl><div><dt>适合</dt><dd>适用情境</dd></div><div><dt>依据</dt><dd>对应材料</dd></div><div><dt>代价</dt><dd>投入条件</dd></div></dl></div><div><header>方案 C</header><dl><div><dt>适合</dt><dd>适用情境</dd></div><div><dt>依据</dt><dd>对应材料</dd></div><div><dt>代价</dt><dd>投入条件</dd></div></dl></div></div></template>
+<template id="sketch-28"><div class="s-annotated"><div class="figure"><div class="figure-sheet"><span>原图位置</span><span>保留细节</span></div><span class="pin pin-a">A</span><span class="pin pin-b">B</span></div><aside><p><b>A · 具体位置</b>说明与图中<br>细节对应。</p><p><b>B · 另一处观察</b>完整原图<br>和来源可查。</p></aside></div></template>
+<template id="sketch-29"><div class="s-tabs"><p class="s-title">同一主题，分组阅读。</p><div class="tab-strip"><span class="active">材料 A</span><span>材料 B</span><span>材料 C</span></div><div class="tab-pane"><p class="s-small s-blue">当前一组的完整内容</p><div class="s-lines" aria-hidden="true"><i></i><i></i><i></i></div><p class="s-label">结构示意 · 正式页面可切换</p></div></div></template>
+<template id="sketch-30"><div class="s-accordion"><p class="always">核心判断始终可见</p><div class="fold"><div class="fold-label"><span>如何理解这个结果</span><span>−</span></div><div class="fold-body">展开对应的完整解释。<div class="s-lines" aria-hidden="true"><i></i><i></i></div></div></div><div class="fold"><div class="fold-label"><span>数据口径与方法补充</span><span>＋</span></div></div><div class="fold"><div class="fold-label"><span>其他问题与附录</span><span>＋</span></div></div></div></template>
+<template id="sketch-31"><div class="s-facts"><header><span class="avatar">◎</span><div><p class="s-title">一份清楚的档案</p><p class="s-label">对象名称与范围</p></div></header><dl><div><dt>研究对象</dt><dd>名称与基本信息</dd></div><div><dt>适用范围</dt><dd>时间、对象与口径</dd></div><div><dt>证据来源</dt><dd>原始材料与位置</dd></div><div><dt>待补资料</dt><dd>缺失项如实标注</dd></div></dl></div></template>
+<template id="sketch-32"><div class="s-board"><section><header>待开始</header><div class="task">明确动作<small>负责人<br>与时间</small></div><div class="task">必要准备</div></section><section><header>进行中</header><div class="task">当前事项<small>材料<br>与依赖</small></div></section><section><header>待验收</header><div class="task">核验结果<small>完成依据<br>与边界</small></div></section></div></template>
 
 <script type="application/json" id="palette-data">
 [
@@ -128,7 +148,15 @@
  {"id":"21","name":"矩阵看板","en":"Content matrix","category":"module","fit":"场景 × 议题、人群 × 内容、多个对象对照","character":"用行列关系归位材料，便于横向和纵向查阅。","caution":"这不是自动生成的热力图；格子里没有数据时不能用深浅编造强弱。","prompt":"按两个有明确含义的维度构成内容矩阵，每格放对应观点与材料；保留行列标题及空白原因，不编造强弱或量化着色。","mobile":"窄屏保留矩阵语义，可在独立区域横向滚动或转成带行列标签的分组清单。"},
  {"id":"22","name":"中心辐射","en":"Hub-and-spoke composition","category":"module","fit":"核心命题与并列维度、框架总览","character":"中心突出一个命题，周围容纳相关维度。","caution":"位置与连线不能暗示未经证实的因果；维度多时应改分组清单。","prompt":"以一个核心命题为中心，周围放必要的并列维度，使用明确标签说明关系；连线只有在关系有依据时添加，不把布局关系当成因果证明。","mobile":"窄屏以核心命题在上、相关维度在下的顺序显示。"},
  {"id":"23","name":"时间轴","en":"Timeline","category":"module","fit":"项目进展、案例历程、事件演变","character":"时间与事件沿一条轴排列，便于追踪先后。","caution":"时间先后不代表因果；没有日期或阶段依据时不补造时间。","prompt":"按已核实的时间或阶段组织事件，每项保留日期、事实、材料与必要解释，清楚区分历史、当前与计划。","mobile":"窄屏使用纵向单列时间轴，不压缩事件正文。"},
- {"id":"24","name":"章节扉页","en":"Chapter divider","category":"page","fit":"长报告换章、汇报节奏、重要主题过渡","character":"大编号、短标题与大量留白，给读者一个停顿。","caution":"章节短或很多时无需每章占满一屏，避免空白拖长报告。","prompt":"在重要章节之间加入克制的扉页，以章节编号、主题和一句导语建立过渡；扉页数量与高度按报告篇幅决定。","mobile":"窄屏收紧留白，让下一段内容容易进入视线。"}
+ {"id":"24","name":"章节扉页","en":"Chapter divider","category":"page","fit":"长报告换章、汇报节奏、重要主题过渡","character":"大编号、短标题与大量留白，给读者一个停顿。","caution":"章节短或很多时无需每章占满一屏，避免空白拖长报告。","prompt":"在重要章节之间加入克制的扉页，以章节编号、主题和一句导语建立过渡；扉页数量与高度按报告篇幅决定。","mobile":"窄屏收紧留白，让下一段内容容易进入视线。"},
+ {"id":"25","name":"决策摘要页","en":"Executive brief","category":"page","introduced":"2026-09-17","fit":"方案开篇、老板速读、会议决策","character":"顶部一句判断，中部安排关键依据与限制，底部明确需要决定的动作。","caution":"只选最重要的信息做摘要，并链接完整证据；不为凑一屏删去决定结论的限制。","difference":"03 Bento 按重点分配卡片大小；这里按判断、依据、边界与行动组织一份可独立阅读的简报。","prompt":"以决策摘要页组织内容：开头点明本次要决定的问题和有依据的判断，接续必要证据与适用边界，末尾给出明确行动或待决事项，并提供完整材料入口；模块数量由内容决定。","mobile":"窄屏按判断、证据、限制、行动单列展开，长内容自然增高，不压缩成固定一屏。","references":[{"title":"USWDS · Summary box","url":"https://designsystem.digital.gov/components/summary-box/"}]},
+ {"id":"26","name":"案例主从浏览","en":"Master–detail browser","category":"page","introduced":"2026-09-17","fit":"竞品案例库、素材库、多个案例深读","character":"紧凑目录和宽幅详情并置，选择一个案例就近查看完整材料。","caution":"保持当前选中项、键盘焦点和返回位置；需要同时对照多个对象时使用比较布局。","difference":"10 侧栏索引跳转同一篇文章的章节；这里从案例列表中选择独立对象并更新详情。","prompt":"采用案例主从浏览：列表显示必要标题、短摘要和标签，主区域呈现当前选中案例的完整材料、判断与来源；清楚标示当前选择，支持键盘操作、可回查链接和返回列表。检索和标签只按实际材料生成。","mobile":"窄屏改为列表到详情的自然导航，提供返回入口并保留列表位置；打印与无脚本阅读时保留全部必要内容。"},
+ {"id":"27","name":"多方案对比","en":"Comparison cards","category":"relation","introduced":"2026-09-17","fit":"多个策略方案、产品卖点、资源组合选择","character":"多个方案并排展开，相同维度对齐，优势与代价同时可见。","caution":"没有统一评价标准时，不标最佳、不编造打分；方案过多或字段过长时改用完整对照表。","difference":"04 左右对照适合两个对象；这里用于多个选项之间的权衡，维度多时优先保留表格语义。","prompt":"将多个备选方案按统一维度并列比较，完整展示适用条件、支撑依据、投入与限制，长字段允许扩展；只有评价规则和证据充分时才标注推荐，不用装饰面积或虚构分数制造高低。","mobile":"窄屏转为带维度标签的方案分组，或在独立对照表内横向滚动；保留对象和维度对应关系。"},
+ {"id":"28","name":"图像标注","en":"Annotated figure","category":"relation","introduced":"2026-09-17","fit":"笔记拆解、产品图解、页面与包装分析","character":"在清晰主图上标出位置，再用对应编号解释具体细节。","caution":"标注不能遮挡原图证据；不以装饰连线暗示因果，原图与标注内容需可区分。","difference":"02 主图侧注解释整张证据；这里让每条说明与图中某个可定位的位置一一对应。","prompt":"保留完整且清晰的原图，用少量有编号的标记指向需要解释的真实位置，旁侧或图下按编号提供说明与来源；可以查看原图，标记不能遮住关键细节，静态版也能读懂对应关系。","mobile":"窄屏把说明移到图下并保留编号，标记支持触摸与键盘，不依赖悬停才能看到必要信息。"},
+ {"id":"29","name":"页签分组","en":"Tabbed content","category":"module","introduced":"2026-09-17","fit":"同一主题下独立的案例、人群或材料视图","character":"一排短页签控制一块宽内容区，减少互不依赖材料同时铺开的长度。","caution":"需要同时比较或必须顺序读完的信息不放在互斥页签里，核心结论始终可见。","difference":"21 矩阵看板同时展示交叉关系；页签每次只展示一组独立材料，适合选择阅读。","prompt":"以简短清晰的页签切换同一主题下相互独立的材料；保留公共标题、关键结论与当前选择，支持键盘、焦点和明确的选中状态。所有内容保留在文档中，打印与无脚本模式可完整阅读。图表面板显示后按容器更新尺寸，保留已有实例、数据和交互。","mobile":"窄屏可改成带标题的顺序分组，或保留可触达的页签；不能裁切标签、挤压图表或隐藏关键解释。","references":[{"title":"GOV.UK · Tabs","url":"https://design-system.service.gov.uk/components/tabs/"}]},
+ {"id":"30","name":"折叠详解","en":"Accordion detail","category":"module","introduced":"2026-09-17","fit":"方法补充、口径说明、常见疑问与附录","character":"清楚的标题先露出，读者按需展开细节，长资料有轻重层次。","caution":"读者必须掌握的结论、重要限制和行动要求直接展示；材料本身很短时无需折叠。","difference":"07 居中长文适合连续阅读全文；折叠详解用于按问题挑选补充信息。","prompt":"将可按需查阅的补充资料按清楚标题组织为折叠区，核心判断、必要证据和重要边界常驻可见。优先使用原生 details/summary，允许键盘操作和多个区块同时展开；为打印、导出与无脚本阅读保留完整内容，图表展开后正确适配尺寸。","mobile":"窄屏用整行可点击标题与清晰展开状态，展开内容自然增高；不把长文塞进固定高度滚动窗。","references":[{"title":"USWDS · Accordion","url":"https://designsystem.digital.gov/components/accordion/"}]},
+ {"id":"31","name":"字段档案","en":"Fact sheet","category":"module","introduced":"2026-09-17","fit":"产品档案、案例信息、研究样本与证据来源卡","character":"对象标题与字段值分层排列，资料整齐、易查，也便于逐项核验。","caution":"字段来自实际资料，未知项明确标注；多对象量化比较应使用表格，不以排版补齐缺失事实。","difference":"20 横向清单列出多个条目；字段档案详细描述一个对象的属性与来源。","prompt":"为单个对象建立清晰档案：顶部说明对象名称与范围，下方以语义化 dl/dt/dd 组织字段及其值，相关来源就近保留；字段顺序按查阅需要安排，长值自然换行，缺失与未验证项如实标注。","mobile":"窄屏可将字段名放在对应值上方，保持逐项关联；长链接和文本能换行。","references":[{"title":"GOV.UK · Summary list","url":"https://design-system.service.gov.uk/components/summary-list/"}]},
+ {"id":"32","name":"行动看板","en":"Action board","category":"module","introduced":"2026-09-17","fit":"策略落地、项目推进、实验与任务跟踪","character":"按真实阶段或状态分列，把行动、负责人和完成依据放在一起。","caution":"卡片位置由真实状态决定；卡片数量和面积不等于进度或完成率，不擅自改变任务状态。","difference":"21 矩阵看板按两个维度交叉归位；行动看板按工作状态组织可执行事项。","prompt":"按项目实际状态建立行动看板，每张卡片保留具体动作、已有负责人、已确认时间和完成依据；未知项如实标注，顺序与状态来自真实记录。若需要交互移动，提供键盘操作或状态菜单，并明确保存结果，不只依赖拖拽。","mobile":"窄屏按状态分组纵向展示，保持状态标题与卡片关联；任务正文完整可读，打印时所有阶段展开。"}
 ]
 </script>
 <script>
@@ -136,6 +164,8 @@
   'use strict';
   const root=document.getElementById('layout-library');
   const layouts=JSON.parse(document.getElementById('layout-data').textContent);
+  const latestBatch='2026-09-17';
+  const newIds=new Set(layouts.filter(item=>item.introduced===latestBatch).map(item=>item.id));
   const presets=JSON.parse(document.getElementById('palette-data').textContent);
   const names={page:'整页结构',relation:'图文关系',module:'内容模块'};
   const validIds=new Set(layouts.map(item=>item.id));
@@ -148,6 +178,7 @@
   const paletteGrid=document.getElementById('palette-grid');
   const status=document.getElementById('status');
   const favoritesOnly=document.getElementById('favorites-only');
+  const newOnly=document.getElementById('new-only');
   const exportButton=document.getElementById('export-favorites');
   const paletteTextarea=document.getElementById('palette-prompt');
   function announce(text){status.textContent=text;document.getElementById('palette-status').textContent=text;}
@@ -189,21 +220,24 @@
   async function copyText(text,textarea){try{if(!navigator.clipboard)throw new Error('clipboard unavailable');await navigator.clipboard.writeText(text);announce('描述已复制，可以直接交给 AI。');}catch(error){textarea.focus();textarea.select();let copied=false;try{copied=document.execCommand('copy');}catch(ignore){}announce(copied?'描述已复制，可以直接交给 AI。':'文字已选中，请按 ⌘C 或 Ctrl+C 复制。');}}
   layouts.forEach(item=>{
     const card=make('article','layout-card');card.id='layout-'+item.id;card.dataset.id=item.id;card.dataset.category=item.category;card.setAttribute('aria-labelledby','title-'+item.id);
-    const top=make('div','card-top');top.append(make('span','card-id',item.id+' / '+(Number(item.id)<=6?'已介绍':'新增')));
+    const top=make('div','card-top');top.append(make('span','card-id'+(newIds.has(item.id)?' card-new':''),item.id+' / '+(newIds.has(item.id)?'本次新增':'布局参考')));
     const mark=make('button','mark');mark.type='button';mark.dataset.mark=item.id;mark.addEventListener('click',()=>{if(favorites.has(item.id))favorites.delete(item.id);else favorites.add(item.id);remember();update();if(storageOK)announce((favorites.has(item.id)?'已收藏 ':'已取消收藏 ')+item.id+' '+item.name+'。');});top.append(mark);card.append(top);
     const sketch=make('div','sketch');sketch.setAttribute('role','img');sketch.setAttribute('aria-label',item.name+'结构示意：'+item.character);sketch.append(document.getElementById('sketch-'+item.id).content.cloneNode(true));card.append(sketch);
     const heading=make('div','card-title');const title=make('h2','',item.name);title.id='title-'+item.id;heading.append(title,make('span','category',names[item.category]));card.append(heading,make('p','english',item.en),make('p','fit','适合：'+item.fit));
     const details=make('details','description');details.append(make('summary','','看用法 · 复制给 AI'));
     details.append(make('p','',item.character),make('p','','使用提醒：'+item.caution),make('p','','窄屏：'+item.mobile));
+    if(item.difference)details.append(make('p','','选择依据：'+item.difference));
+    if(item.references&&item.references.length){const refs=make('p','reference-links','用法参考：');item.references.forEach(ref=>{const link=make('a','',ref.title);link.href=ref.url;link.target='_blank';link.rel='noopener noreferrer';refs.append(link);});details.append(refs);}
     const textarea=make('textarea','prompt');textarea.readOnly=true;textarea.value=promptFor(item);textarea.setAttribute('aria-label',item.id+' '+item.name+'的 AI 布局与配色描述');details.append(textarea);
     const copy=make('button','copy','复制布局与配色');copy.type='button';copy.addEventListener('click',()=>copyText(textarea.value,textarea));details.append(copy);card.append(details);gallery.append(card);
   });
   function update(){
     let visible=0;
-    root.querySelectorAll('.layout-card').forEach(card=>{const id=card.dataset.id;const saved=favorites.has(id);card.dataset.saved=String(saved);const button=card.querySelector('[data-mark]');button.setAttribute('aria-pressed',String(saved));button.textContent=saved?'★ 已收藏':'☆ 收藏';const item=layouts.find(row=>row.id===id);button.setAttribute('aria-label',(saved?'取消收藏 ':'收藏 ')+id+' '+item.name);const show=(category==='all'||card.dataset.category===category)&&(!favoritesOnly.checked||saved);card.hidden=!show;if(show)visible++;});
-    root.querySelectorAll('[data-category].filter').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.category===category)));
+    root.querySelectorAll('.layout-card').forEach(card=>{const id=card.dataset.id;const saved=favorites.has(id);card.dataset.saved=String(saved);const button=card.querySelector('[data-mark]');button.setAttribute('aria-pressed',String(saved));button.textContent=saved?'★ 已收藏':'☆ 收藏';const item=layouts.find(row=>row.id===id);button.setAttribute('aria-label',(saved?'取消收藏 ':'收藏 ')+id+' '+item.name);const show=(category==='all'||card.dataset.category===category)&&(!favoritesOnly.checked||saved)&&(!newOnly.checked||newIds.has(id));card.hidden=!show;if(show)visible++;});
+    root.querySelectorAll('[data-category].filter').forEach(button=>{const key=button.dataset.category;button.setAttribute('aria-pressed',String(key===category));button.textContent=(key==='all'?'全部':names[key])+' · '+(key==='all'?layouts.length:layouts.filter(item=>item.category===key).length);});
+    document.getElementById('new-count').textContent=String(newIds.size);
     document.getElementById('favorite-count').textContent=String(favorites.size);
-    document.getElementById('result-count').textContent=(favoritesOnly.checked?'收藏中显示 ':'显示 ')+visible+' / '+layouts.length+' 种布局';
+    document.getElementById('result-count').textContent=(newOnly.checked?'本次新增 · ':'')+(favoritesOnly.checked?'收藏中显示 ':'显示 ')+visible+' / '+layouts.length+' 种布局';
     document.getElementById('empty-state').hidden=visible!==0;
     exportButton.disabled=favorites.size===0&&paletteFavorites.size===0;
   }
@@ -234,7 +268,7 @@
       const swatches=make('div','swatches');
       [[p.accent,'强调'],[p.secondary,'辅助'],[p.sourceStart||p.start,p.custom?'装饰起点':'浅底起点'],[p.sourceEnd||p.end,p.custom?'装饰终点':'浅底终点']].forEach(([color,label])=>{const swatch=make('div','swatch');swatch.title=label+' '+color;const chip=make('i');chip.style.background=color;chip.setAttribute('aria-hidden','true');swatch.append(chip,make('span','',color));swatches.append(swatch);});card.append(swatches);
       const controls=make('div','palette-buttons');
-      const use=make('button','','用这组');use.type='button';use.dataset.usePalette=p.id;use.setAttribute('aria-label','预览配色 '+p.name);use.addEventListener('click',()=>{selectedPalette=p.id;rememberPalettes();applyPalette();if(storageOK)announce('已切换到 '+p.name+'，24 种布局的预览与 AI 描述已更新。');});
+      const use=make('button','','用这组');use.type='button';use.dataset.usePalette=p.id;use.setAttribute('aria-label','预览配色 '+p.name);use.addEventListener('click',()=>{selectedPalette=p.id;rememberPalettes();applyPalette();if(storageOK)announce('已切换到 '+p.name+'，全部布局的预览与 AI 描述已更新。');});
       const mark=make('button');mark.type='button';mark.dataset.markPalette=p.id;mark.addEventListener('click',()=>{if(paletteFavorites.has(p.id))paletteFavorites.delete(p.id);else paletteFavorites.add(p.id);rememberPalettes();applyPalette();if(storageOK)announce((paletteFavorites.has(p.id)?'已收藏配色 ':'已取消收藏配色 ')+p.name+'。');});controls.append(use,mark);
       if(p.custom){const remove=make('button','palette-delete','移除');remove.type='button';remove.setAttribute('aria-label','移除自选配色 '+p.name);remove.addEventListener('click',()=>{customPalettes=customPalettes.filter(row=>row.id!==p.id);paletteFavorites.delete(p.id);if(selectedPalette===p.id)selectedPalette='guyu';rememberPalettes();renderPalettes();applyPalette();document.querySelector('[data-use-palette="'+selectedPalette+'"]').focus();if(storageOK)announce('已移除自选配色 '+p.name+'。');});controls.append(remove);}
       card.append(controls);paletteGrid.append(card);
@@ -249,6 +283,7 @@
   document.getElementById('copy-palette').addEventListener('click',()=>copyText(paletteTextarea.value,paletteTextarea));
   root.querySelectorAll('.filter[data-category]').forEach(button=>button.addEventListener('click',()=>{category=button.dataset.category;update();}));
   favoritesOnly.addEventListener('change',update);
+  newOnly.addEventListener('change',update);
   exportButton.addEventListener('click',()=>{
     const selected=layouts.filter(item=>favorites.has(item.id)),savedPalettes=allPalettes().filter(p=>paletteFavorites.has(p.id));if(!selected.length&&!savedPalettes.length)return;
     const now=new Date();const date=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
@@ -261,9 +296,11 @@
   renderPalettes();applyPalette();
   if(!storageOK)announce('这里暂时不能记住收藏，请导出清单留存。');
   function revealLinkedLayout(){
+    if(location.hash==='#new-layouts'){category='all';favoritesOnly.checked=false;newOnly.checked=true;document.getElementById('palettes').open=false;update();document.getElementById('new-layouts').scrollIntoView({block:'start'});return;}
     if(location.hash==='#palettes'){document.getElementById('palettes').open=true;document.getElementById('palettes').scrollIntoView({block:'start'});return;}
-    const linked=location.hash.match(/^#layout-(\d{2})$/);if(!linked||!validIds.has(linked[1]))return;category='all';favoritesOnly.checked=false;update();const card=document.getElementById('layout-'+linked[1]);card.querySelector('details').open=true;card.scrollIntoView({block:'start'});
+    const linked=location.hash.match(/^#layout-(\d{2})$/);if(!linked||!validIds.has(linked[1]))return;category='all';favoritesOnly.checked=false;newOnly.checked=false;update();const card=document.getElementById('layout-'+linked[1]);card.querySelector('details').open=true;card.scrollIntoView({block:'start'});
   }
+  root.querySelector('a[href="#new-layouts"]').addEventListener('click',()=>{if(location.hash==='#new-layouts')revealLinkedLayout();});
   window.addEventListener('hashchange',revealLinkedLayout);revealLinkedLayout();
 })();
 </script>

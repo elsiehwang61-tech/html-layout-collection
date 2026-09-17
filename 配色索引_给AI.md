@@ -83,7 +83,7 @@
 
 单文件 HTML 中包含两个 JSON 数据块，无需运行脚本即可读取：
 
-- `script#layout-data`：24 种布局的编号、用途、描述、提醒和窄屏规则。
+- `script#layout-data`：32 种布局的编号、用途、描述、提醒和窄屏规则；新增布局还包含选择依据、加入日期及适用的官方参考链接。
 - `script#palette-data`：5 组预设色板。`id` 是稳定标识，`code` 是沟通编号，`origin` 说明来源，`accent` / `secondary` 是强调与辅助色，`heading` / `explain` 是文字色，`start` / `end` / `angle` 定义主浅底渐变，`softStart` / `softEnd` 定义辅助浅底，`lineStart` / `lineEnd` 定义装饰细线，`usage` 定义使用范围。
 
 这些字段是页面展示规则，不是图表数据或业务模板。只读取公开 HTML 无法得知某位访问者的个人收藏；请读取其导出清单。
