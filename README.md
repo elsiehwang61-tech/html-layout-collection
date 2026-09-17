@@ -1,25 +1,48 @@
-# HTML Layout Collection
+# 雪莉的 HTML 布局、配色与图表收藏册
 
-A collection of 32 HTML layout patterns with visual sketches, use cases, and reusable layout descriptions.
+[打开在线收藏册](https://elsiehwang61-tech.github.io/html-layout-collection/) · [直接看图表](https://elsiehwang61-tech.github.io/html-layout-collection/#charts) · [GitHub 仓库](https://github.com/elsiehwang61-tech/html-layout-collection)
 
-Features:
+一份可离线打开、可收藏、可复制给 AI 的参考册：**32 种布局、5 组预设配色、自选色板、40 种图表**。布局、颜色与图型可以自由组合，不规定报告章节、文字长度或默认图型。
 
-- Browse page structures, text/image relationships, and content modules.
-- Preview five palettes based on the original Guyu visual style across all 32 layouts.
-- Filter the latest eight additions: executive brief, master–detail browser, comparison cards, annotated figure, tabs, accordion, fact sheet, and action board.
-- Bookmark layouts and palettes independently in the current browser.
-- Add custom colors, with pale reading surfaces and readable text colors.
-- Export selected layouts, the active palette, and favorite palette alternatives as Markdown.
-- Copy combined layout and color instructions for reuse with an AI assistant.
+## 最短用法
 
-Open `index.html` locally or use the GitHub Pages site linked from this repository.
+1. 在「配色收藏」点「用这组」，查看布局与本册图表示例的效果；也可以添加自己的颜色。
+2. 喜欢的布局、配色或图表点「☆ 收藏」。三类收藏相互独立，页面不会替你预选。
+3. 展开「看用法 · 复制给 AI」，复制包含用法、当前配色和内容保护规则的描述。
+4. 点「导出收藏清单」，把选中的布局、图表、当前配色和备选色板一起保存成 Markdown。只收藏其中一类也能导出。
 
-The page is self-contained. No analytics, account registration, external libraries, or server storage are required. Bookmarks stay in each visitor's browser and are not uploaded to GitHub. Export the Markdown selection to keep or share it across devices.
+例如：「用 08 分屏封面开篇，正文用 02 主图侧注，配色选 C02 雾粉雾蓝；趋势数据检查是否适合 T09 折线图。」
 
-All preview content is schematic. It contains no business data or authentic interview quotations. Layouts do not prescribe chart types, chapter counts, or conclusions.
+## 图表怎么挑
 
-New interaction patterns include implementation requirements in their descriptions; the thumbnail sketches themselves are static. Usage notes for summaries, tabs, accordions, and key-value records link to official USWDS and GOV.UK guidance. All sketches are original compositions.
+图表区按比较、趋势、构成、分布、关系、流向与层级、时间与目标、文本分为 8 类，也可搜索编号、名称或问题。
 
-Page styling preserves existing chart colors, data encoding, axes, legends, visualMap, and interactions. Decorative gradients do not determine chart types or values.
+每种包含实际图形、适用问题、所需字段、使用提醒、给 AI 的描述，以及可展开回查的完整示意数据表。包括条形、哑铃、坡度、子弹、折线、面积、小多图、排名变化、环形、堆叠、瀑布、帕累托、直方、箱线、区间、散点、气泡、热力、雷达、漏斗、桑基、网络、树状、矩形树、旭日、日历、甘特、仪表、平行坐标与词云等。
 
-The written references are included as [布局索引_给AI.md](布局索引_给AI.md) and [配色索引_给AI.md](配色索引_给AI.md). The first four palette gradients come from the original visual system; the fifth combines its pink-to-gold decorative line with newly paired pale backgrounds.
+**全部图表示例使用人工构造的图型示意数据，不来自业务样本，不用于业务结论。** 图中量程、目标、区间和分界线也是教学设定。导出清单只包含用法与数据条件，不包含这些演示值。正式报告需使用提供或核验后的真实数据；没有数据时应说明缺口。
+
+40 种只是可扩展的常见参考，不是全部图型或白名单。收藏表达偏好；业务问题、字段和证据决定最终是否适用。尤其不能把没有可靠连接依据的搜索、阅读、评论和购买拼成同一漏斗或桑基流向。
+
+## 配色与渐变
+
+预置谷雨粉蓝、雾粉雾蓝、柔粉留白、柔蓝留白、粉金细线。来源与全部色值见《配色索引_给AI.md》。自选色板可设置名称、强调色、辅助色和渐变两端；浅底混入白色，文字适当加深以保持可读。复制描述包含原色与实际使用色值。
+
+渐变用于背景与装饰。切换色板只会更新收藏册自己的预览；正式报告里已有图表的数据、系列颜色含义、坐标轴、图例、visualMap 和交互应保留。新增图表按数据含义单独配色，不把装饰渐变当作数值编码。
+
+## 给其他 AI 读取
+
+- 《布局索引_给AI.md》：32 种布局的用途、特点、窄屏处理与完整描述。
+- 《配色索引_给AI.md》：颜色、渐变、来源与使用边界。
+- 《图表索引_给AI.md》：40 种图的适用问题、字段、画法与误用边界。
+- HTML 内的 `layout-data`、`palette-data`、`chart-data` 为独立 JSON 数据块，可直接读取，不依赖之前的聊天。`chart-demo-data` 单独存放示意值，并带 `is_demo: true` 标记。
+- 个人收藏与自选色板不写入公开网页。交给其他 AI 时，使用你导出的 Markdown 清单，其中带有自己的选择。
+
+## 收藏与离线
+
+双击「HTML布局收藏册.html」即可离线使用。39 种图使用内嵌 Apache ECharts 5.6.0，词云使用 SVG；无 CDN 或在线资源依赖。开源许可与 NOTICE 保留在页面末尾「图表引擎与开源许可」。外部参考链接只在点击时打开。
+
+收藏保存在当前浏览器、当前访问位置。升级沿用原来的布局与配色记录，图表记录独立保存。线上与本地、不同浏览器或设备不会自动同步；清理站点数据或更改本地文件路径可能无法接续。长期留存请导出清单。复制或保存受限时，页面提供手动复制或导出提示。
+
+布局缩略图仅表示空间结构；示意模块数、章节数和图型不限制正式内容。页面是独立参考，不改动既有谷雨 UI Kit、报告或默认样式。
+
+版本：2026-09-17。本地技术检查记录位于 `验收/`，不随公开网站发布。
