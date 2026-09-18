@@ -15,6 +15,7 @@
 
 不同整页结构与不同色板互为备选。图表由真实问题和数据决定；示意文案、示意数据不进入业务报告。`component-data` 与 `prompt-contract-data` JSON 块是独立机器可读入口。
 
+
 ## B01 简洁三线表 · 表格
 
 【任务】请按以下「B01 简洁三线表」为我制作或修改 HTML。下面已给出具体规则，无需访问收藏册、查编号或读取之前的聊天。
@@ -25,9 +26,17 @@
 需要材料：字段名、真实行数据、单位和来源。
 使用语义化 table、caption、thead、tbody 和 scope；只保留表顶、表头底、表底三条线（2px / 1px / 1px），无竖线。文本左对齐、数值右对齐并用等宽数字；表头 14px/600，正文 16px，单元格内边距 12px 16px。单位、时间、分母、来源和缺失说明就近保留。
 窄屏在带名称、可键盘聚焦的表格容器内横向滚动；不让整页横向溢出。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -43,9 +52,17 @@
 需要材料：同一粒度的行数据、列定义、单位及来源。
 保留完整表格语义；隔行使用当前色板的最浅底色，另一行白底；表头半粗，行间用 1px 细线。每行高度由内容决定，数值右对齐。斑马纹只帮助定位，不表达好坏或数值强弱。
 窄屏保留列标题和行对应关系，在独立容器内滚动；来源在容器下方可直接阅读。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -61,9 +78,17 @@
 需要材料：对象清单、统一比较维度、每个单元格的材料与来源。
 第一列放评价维度，后续列放品牌或方案；首列使用 scope=row，表头使用 scope=col。首列可 sticky left:0，并设置不透明底色，行内横向滚动时仍知道在比什么。只有已提供且同口径的信息才能比较；未知明确标注，不凭空打分或标最佳。
 窄屏表格横向滚动、首列保持可见；首列宽度不超过可视区域的 40%，长文可展开。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -79,9 +104,17 @@
 需要材料：真实表格、需要强调的行列及强调依据。
 整张表保持中性，仅给用户指定或有证据的行/列添加浅底，并用文字标签“关注项”解释。不能单靠颜色表达含义，不默认第一行最佳。正文用可读字色，重点数值可 700 字重，其他数值完整保留。
 窄屏保留关注标签和对应字段；重点不依赖悬停可见。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -97,9 +130,17 @@
 需要材料：已核验指标、口径、时期、单位、分母及来源。
 列出指标名、数值、单位、时间、口径或分母、来源。描述很长时用详情行展开，决定结论的边界仍直接显示。空值区分“缺失”“不适用”和真实零；不把同比、差值、百分点混为一谈。
 窄屏可变成每条指标的 dl 字段卡，保留字段名与值；不能仅显示一个大数字。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -115,9 +156,17 @@
 需要材料：已有判断、支撑材料、边界和下一步。
 使用轻浅底和左侧 3px 强调线。依次显示用户已有的一句判断、最必要的支撑、适用边界和行动含义；结论 20–24px/700，证据正文 16px。没有足够证据时显示“待验证判断”，不把排版突出当成事实认证。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -133,9 +182,17 @@
 需要材料：可核验原文、来源及必要上下文。
 使用 blockquote 引用用户提供的原文，cite 标出真实来源，另列背景和分析。原文与分析在视觉上分开；删节必须用省略标记并保留回查入口，不伪造说话者、引语或引用日期。引用 18px/1.8，来源 14px。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -151,9 +208,17 @@
 需要材料：需要解释的术语、方法或补充材料。
 使用 1px 细边框和低饱和浅底，标题 16px/600、正文 16px/1.75。关键限制常驻显示；仅附加解释可用 details/summary，支持键盘、打印展开。不用警告色装饰普通说明。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -169,9 +234,17 @@
 需要材料：每条主张的已知证据状态与判定依据。
 用文字标签明确区分“已核验事实”“来源方主张”“合理推断”“待验证”；状态依据来自材料或用户确认。颜色仅辅助识别，不自行升级状态。标签旁提供支持依据或最小补证；不得通过颜色暗示可信评分。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -187,9 +260,17 @@
 需要材料：正文层级、内容与所选字体。
 正文 18px / 1.85，段间距 28px；页面主标题 48px/1.2，章节标题 32px/1.35，小标题 23px/1.45；标题字重 700，图注和来源 14px/1.6。正文容器最大宽 760px，长段单栏宽不超过约 38 个汉字；全幅图表可突破正文行宽。手机主标题最多 32px，其他字号不因内容多而缩小；间距可以收紧但不能删内容。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 48px，字重 700，行高 1.2，段后距 20px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 32px，字重 700，行高 1.35，段后距 18px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 18px，字重 400，行高 1.85，段后距 28px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.6，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 23px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -205,9 +286,17 @@
 需要材料：正文层级、内容与所选字体。
 正文 16px / 1.75，段间距 22px；页面主标题 40px/1.2，章节标题 28px/1.35，小标题 21px/1.45；标题字重 700，图注和来源 14px/1.6。正文容器最大宽 1100px，长段单栏宽不超过约 38 个汉字；全幅图表可突破正文行宽。手机主标题最多 32px，其他字号不因内容多而缩小；间距可以收紧但不能删内容。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.2，段后距 20px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 28px，字重 700，行高 1.35，段后距 18px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 22px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.6，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 21px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -223,9 +312,17 @@
 需要材料：正文层级、内容与所选字体。
 正文 16px / 1.6，段间距 16px；页面主标题 34px/1.2，章节标题 25px/1.35，小标题 20px/1.45；标题字重 700，图注和来源 14px/1.6。正文容器最大宽 1200px，长段单栏宽不超过约 38 个汉字；全幅图表可突破正文行宽。手机主标题最多 32px，其他字号不因内容多而缩小；间距可以收紧但不能删内容。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 34px，字重 700，行高 1.2，段后距 20px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 25px，字重 700，行高 1.35，段后距 18px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.6，段后距 16px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.6，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -241,9 +338,17 @@
 需要材料：需要分组的真实内容。
 白色卡片，1px #e8ebf0 边框、12px 圆角、24px 内边距，无阴影；卡片间距 20px。边框划分内容组，不表示量级。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -259,9 +364,17 @@
 需要材料：主次关系已明确的内容。
 白色卡片，16px 圆角、28px 内边距，阴影 0 8px 28px rgba(39,52,69,.07)，配 1px #e8ebf0 细边框。仅为层级服务，不让所有模块竞争焦点。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -277,9 +390,17 @@
 需要材料：标题、正文和所选浅底渐变。
 卡片正文白底，16px 圆角，只有卡头使用当前浅底渐变；标题使用实际可读标题色。正文 24px 内边距，卡头与正文用 1px 细线分开；不把渐变扩散到数据编码。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -295,9 +416,17 @@
 需要材料：需要提示的内容及强调依据。
 白底、12px 圆角，左侧 3px 当前装饰强调色，其他边 1px #e8ebf0；24px 内边距。重点仍需标题或文字标识，不靠色线改变结论等级。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -313,9 +442,17 @@
 需要材料：章节或内容组及顺序。
 内容不包围成卡片；章节间使用 1px #e8ebf0 水平线和 32px 上下间距；可在章标题下加 48px 长、2px 高的当前强调色细线。保留真实标题层级与连贯阅读。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -331,9 +468,17 @@
 需要材料：真实序列、单位、需要标记的对象或规则。
 仅对用户指定或满足已确认规则的关键数据加直接标签，显示对象、数值和单位；数值必须从原序列读取。避免全部标签相互覆盖；重要信息也保留在数据表里。改变标注，不改数值、尺度和排序。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -349,9 +494,17 @@
 需要材料：完整序列、时间、峰值或异常规则、注释来源。
 从完整真实序列核实峰值；并列峰值不能只挑有利项。用细引线和短注释标记；异常需要明确检测规则，峰值不自动叫异常。解释与原因要有证据，不用走势推断因果；不平滑数据制造峰谷。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -367,9 +520,17 @@
 需要材料：真实数据、参考值、口径和来源。
 仅在用户提供或能依据已确认口径计算的参考值上画虚线；标签写明值、单位、含义及来源。均值注明加权或非加权、范围；阈值不得为了好看取中点。无来源时保留普通图，不画参考线。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -385,9 +546,17 @@
 需要材料：系列定义、单位、范围、分母和颜色含义。
 图例保持真实系列顺序和含义，用颜色加文字、必要时加形状共同辨识；单位靠近标题或轴，注明时期与分母。渐变仅在连续数值色阶确有含义时使用，不把页面渐变复制到分类编码。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -403,9 +572,17 @@
 需要材料：已支持的观察、限制、来源、时间与统计口径。
 图下依次给出用户已有的观察、必要限制及可核验来源；来源 14px/1.6，文本自然换行。长网址使用明确标签；重要边界不可只藏在 tooltip。图表可交互，静态阅读也能理解口径。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -421,9 +598,17 @@
 需要材料：正文、真实图表数据、可选主视觉及来源。
 开篇采用文字与主视觉分屏；正文让主要图表占较大空间、解释侧注占较小空间；随后放可核验明细表和结论行动。没有主视觉时使用浅底标题区，不编造图片或观点。模块数量按内容增减。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 组合中的布局定义：
 分屏封面：开篇用文字与主视觉分屏：一侧呈现主题、一句判断与必要背景，另一侧放与主题直接相关的真实图片或有明确含义的视觉。 窄屏按标题、说明、主视觉堆叠，确保首屏能读懂主题。
 主图侧注：用较宽的主区域呈现本次合适的图表、图片或表格，旁边安排观察、解释与行动含义，来源与口径紧邻证据。 窄屏先呈现主证据，再按顺序显示侧注；宽表在自身区域滚动。
@@ -443,9 +628,17 @@
 需要材料：待决问题、可比较对象、统一维度及证据。
 顶部用决策摘要交代要决定什么，中部并列方案与统一维度的完整对比表；图表使用与问题相适配的类型，末尾显示条件、代价与行动。评价标准不足时不自动选赢家。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 组合中的布局定义：
 决策摘要页：以决策摘要页组织内容：开头点明本次要决定的问题和有依据的判断，接续必要证据与适用边界，末尾给出明确行动或待决事项，并提供完整材料入口；模块数量由内容决定。 窄屏按判断、证据、限制、行动单列展开，长内容自然增高，不压缩成固定一屏。
 多方案对比：将多个备选方案按统一维度并列比较，完整展示适用条件、支撑依据、投入与限制，长字段允许扩展；只有评价规则和证据充分时才标注推荐，不用装饰面积或虚构分数制造高低。 窄屏转为带维度标签的方案分组，或在独立对照表内横向滚动；保留对象和维度对应关系。
@@ -465,9 +658,17 @@
 需要材料：案例背景、真实过程、原声或材料、结果与来源。
 简洁主题开篇，正文以纵向叙事展开事件与已知证据，使用原声引用保留上下文，末尾呈现可核验结果和下一步。事件时间与因果分别说明；章节和长度由材料决定。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 组合中的布局定义：
 全幅开场：用全幅主视觉构成开场，将短标题与一句引言安排在清晰区域；长正文、图表和方法说明放到后续独立阅读区域。 窄屏调整图片裁切与文字位置，保留主体和可读对比。
 纵向叙事：沿纵向组织问题、证据、解释和行动等实际段落，适度错开位置制造节奏；段落数由内容决定，保留每一步的依据与边界。 窄屏使用顺畅单列，减少左右错位和多余留白。
@@ -487,9 +688,17 @@
 需要材料：真实封面或截图、完整标题、作者或来源、可选日期、真实详情或原文链接；没有的字段不补造。
 白色卡片、14px 圆角、1px 细边框；图片区默认 3:4 作为设计容器，object-fit:contain 保留原图与文字，剩余空间用浅底填充。图片下依次放完整标题 18px/700、来源与日期 14px；内边距 18px。整张链接可包含图片、标题和来源，不隐藏回查信息。 封面示例仅用于设计，正式页面使用提供的素材；不捏造作者、点赞、收藏、销量或效果。已有笔记原图内的标题与证据不可重写、抹除或裁掉。标题、来源、日期在图片外保留可读文字，图片有恰当 alt；装饰图用空 alt。导航用真实 a 元素，默认链接到已存在的详情；外部原文需用户提供真实 URL，新标签页须提示并加 rel="noopener noreferrer"。缺链接时显示“原文链接待提供”，不做空链接或伪造平台 URL。收藏按钮与链接平级，避免嵌套点击区域。 封面比例是可选设计参数，不代表平台官方规格。
 手机端单列，封面最大宽度 360px 并居中，标题自然换行；点击后能看清完整原图。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -505,9 +714,17 @@
 需要材料：真实封面或截图、完整标题、作者或来源、可选日期、真实详情或原文链接；没有的字段不补造。
 适用于新设计封面：白底、20px 内边距；顶部小栏目标签 12px，主标题 28px/1.3，接近方形的主图区居中，底部放一句提供的摘要与来源。主图与标题不相互覆盖，装饰短线使用当前强调色。已有原图用 contain；只有确认可裁切的装饰照片可 cover。 封面示例仅用于设计，正式页面使用提供的素材；不捏造作者、点赞、收藏、销量或效果。已有笔记原图内的标题与证据不可重写、抹除或裁掉。标题、来源、日期在图片外保留可读文字，图片有恰当 alt；装饰图用空 alt。导航用真实 a 元素，默认链接到已存在的详情；外部原文需用户提供真实 URL，新标签页须提示并加 rel="noopener noreferrer"。缺链接时显示“原文链接待提供”，不做空链接或伪造平台 URL。收藏按钮与链接平级，避免嵌套点击区域。 封面比例是可选设计参数，不代表平台官方规格。
 手机端保持标题—图片—来源顺序，标题可到 24px，内容增高；不截断长标题。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -523,9 +740,17 @@
 需要材料：真实封面或截图、完整标题、作者或来源、可选日期、真实详情或原文链接；没有的字段不补造。
 默认 3:4 设计容器，主视觉铺在底层，下方叠浅底渐变或实色文字面板；标题 26–32px/700，留出四周 20px 安全边距。选择当前实际可读字色，按最终图片和渐变最不利位置检查对比度，不足时改为不透明浅底。仅用于允许重新设计的素材；原笔记截图不覆盖文字与证据。 封面示例仅用于设计，正式页面使用提供的素材；不捏造作者、点赞、收藏、销量或效果。已有笔记原图内的标题与证据不可重写、抹除或裁掉。标题、来源、日期在图片外保留可读文字，图片有恰当 alt；装饰图用空 alt。导航用真实 a 元素，默认链接到已存在的详情；外部原文需用户提供真实 URL，新标签页须提示并加 rel="noopener noreferrer"。缺链接时显示“原文链接待提供”，不做空链接或伪造平台 URL。收藏按钮与链接平级，避免嵌套点击区域。 封面比例是可选设计参数，不代表平台官方规格。
 窄屏标题自然换行并允许卡片变高；不固定行数，不靠缩字隐藏信息。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -541,9 +766,17 @@
 需要材料：真实封面或截图、完整标题、作者或来源、可选日期、真实详情或原文链接；没有的字段不补造。
 横向卡片，左侧缩略图宽 104px、比例 3:4、contain，右侧为 18px 半粗标题、摘要、14px 来源和明确“查看详情”文案。间距 16px，卡片内边距 16px、12px 圆角。图片和文字是同一详情入口，其他操作放在链接外。 封面示例仅用于设计，正式页面使用提供的素材；不捏造作者、点赞、收藏、销量或效果。已有笔记原图内的标题与证据不可重写、抹除或裁掉。标题、来源、日期在图片外保留可读文字，图片有恰当 alt；装饰图用空 alt。导航用真实 a 元素，默认链接到已存在的详情；外部原文需用户提供真实 URL，新标签页须提示并加 rel="noopener noreferrer"。缺链接时显示“原文链接待提供”，不做空链接或伪造平台 URL。收藏按钮与链接平级，避免嵌套点击区域。 封面比例是可选设计参数，不代表平台官方规格。
 容器小于 360px 时图宽降到 80px，长标题自然换行；仍放不下则上下排列，不产生页面横向滚动。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -559,9 +792,17 @@
 需要材料：真实封面或截图、完整标题、作者或来源、可选日期、真实详情或原文链接；没有的字段不补造。
 适用于新设计封面：使用当前浅底渐变和少量细线；顶部系列名 14px，中部大编号 48–64px 与完整主题 28px/1.3，底部放提供的栏目说明。编号仅为展示顺序，不能暗示排名或效果；系列的字体、标题位置和边距 24px 保持一致。默认 3:4，实际比例可随素材和任务调整。 封面示例仅用于设计，正式页面使用提供的素材；不捏造作者、点赞、收藏、销量或效果。已有笔记原图内的标题与证据不可重写、抹除或裁掉。标题、来源、日期在图片外保留可读文字，图片有恰当 alt；装饰图用空 alt。导航用真实 a 元素，默认链接到已存在的详情；外部原文需用户提供真实 URL，新标签页须提示并加 rel="noopener noreferrer"。缺链接时显示“原文链接待提供”，不做空链接或伪造平台 URL。收藏按钮与链接平级，避免嵌套点击区域。 封面比例是可选设计参数，不代表平台官方规格。
 手机端保持阅读顺序，编号可缩到 40px，标题不小于 24px，长文可以增加高度。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -577,9 +818,17 @@
 需要材料：真实封面或截图、完整标题、作者或来源、可选日期、真实详情或原文链接；没有的字段不补造。
 外层用 CSS Grid 两列，间距 16–20px；每张包含完整封面、18px 标题、14px 来源和独立详情链接。封面容器可统一 1:1，原图 object-fit:contain 保留全部信息；只对确认可裁的装饰照片用 cover。按提供的顺序从左到右、从上到下排列，不以瀑布流重排阅读顺序；数量由真实材料决定。 封面示例仅用于设计，正式页面使用提供的素材；不捏造作者、点赞、收藏、销量或效果。已有笔记原图内的标题与证据不可重写、抹除或裁掉。标题、来源、日期在图片外保留可读文字，图片有恰当 alt；装饰图用空 alt。导航用真实 a 元素，默认链接到已存在的详情；外部原文需用户提供真实 URL，新标签页须提示并加 rel="noopener noreferrer"。缺链接时显示“原文链接待提供”，不做空链接或伪造平台 URL。收藏按钮与链接平级，避免嵌套点击区域。 封面比例是可选设计参数，不代表平台官方规格。
 小于 600px 时改为单列；每篇维持独立标题与链接，触控入口清晰。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -595,9 +844,17 @@
 需要材料：入口标题与封面、目标详情内容或真实原文 URL、所需打开方式；来源信息仅使用已提供材料。
 入口用 a href="#唯一详情ID"；详情保留可聚焦标题或 tabindex="-1" 容器，跳转时更新 URL 片段、滚动到可见区域并把焦点移到详情。固定导航下给目标设置 scroll-margin-top。详情若折叠，先展开；支持首次带片段打开、刷新、前进与后退，并有返回目录入口。尊重减少动态效果设置。 不伪造笔记地址、作者和互动数据；没有目标内容或链接时明确显示缺口。页面内用 a 跳转，展开与弹窗用 button 或 details/summary；不能只给 div 加点击，也不能在整卡链接中嵌套按钮。键盘焦点清楚，触控目标建议至少 44px；图标旁有说明文字。打开方式与文字提示一致，内容和图表不因导航样式而删改。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -613,9 +870,17 @@
 需要材料：入口标题与封面、目标详情内容或真实原文 URL、所需打开方式；来源信息仅使用已提供材料。
 使用用户提供的有效 HTTPS 原文地址作为 a href，target="_blank"，rel="noopener noreferrer"；链接文案明确“查看原文（新标签页）”。不使用脚本拼接伪链接或定时弹窗；缺地址时显示“原文链接待提供”，不要给无目标元素添加可点击样式。链接打开后保留本页阅读位置。收藏册演示在新标签页打开站内示意原文，正式应用须替换为真实链接。 不伪造笔记地址、作者和互动数据；没有目标内容或链接时明确显示缺口。页面内用 a 跳转，展开与弹窗用 button 或 details/summary；不能只给 div 加点击，也不能在整卡链接中嵌套按钮。键盘焦点清楚，触控目标建议至少 44px；图标旁有说明文字。打开方式与文字提示一致，内容和图表不因导航样式而删改。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -631,9 +896,17 @@
 需要材料：入口标题与封面、目标详情内容或真实原文 URL、所需打开方式；来源信息仅使用已提供材料。
 入口用 button 打开原生 dialog.showModal()，由 aria-labelledby 指向清楚标题。弹窗最大宽 720px、最大高 85dvh、内容区可滚动，顶部关闭按钮持续可见。打开时移入焦点；支持 Escape、关闭按钮和 Tab 焦点限制，关闭后焦点回到原触发按钮。长文完整显示，原图 contain；弹窗内可以另放真实原文 a 链接并标记新标签页。 不伪造笔记地址、作者和互动数据；没有目标内容或链接时明确显示缺口。页面内用 a 跳转，展开与弹窗用 button 或 details/summary；不能只给 div 加点击，也不能在整卡链接中嵌套按钮。键盘焦点清楚，触控目标建议至少 44px；图标旁有说明文字。打开方式与文字提示一致，内容和图表不因导航样式而删改。
 手机端弹窗距视口两侧至少 12px，宽度自适应，正文 16px；内容内部滚动，关闭按钮不随正文移出可视区。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
@@ -649,9 +922,17 @@
 需要材料：入口标题与封面、目标详情内容或真实原文 URL、所需打开方式；来源信息仅使用已提供材料。
 使用原生 details/summary，summary 明确“展开笔记摘要”，保持原生展开状态和键盘行为；内容在原位置自然撑高。必要的标题与来源始终可见，长文不设置固定高度裁切；详细正文或原文入口用独立链接。不要用折叠藏关键限制，不让多个不相关折叠强制互斥。 不伪造笔记地址、作者和互动数据；没有目标内容或链接时明确显示缺口。页面内用 a 跳转，展开与弹窗用 button 或 details/summary；不能只给 div 加点击，也不能在整卡链接中嵌套按钮。键盘焦点清楚，触控目标建议至少 44px；图标旁有说明文字。打开方式与文字提示一致，内容和图表不因导航样式而删改。
 手机端按阅读顺序自然展开，长文本换行，正文不小于 16px；内容增加时自然增高。
+四层文字数值是整页基础；组件内有具体字号建议时先用组件建议，标有用户自定的对应字段优先。字体与实际字色使用下方方案。
 页面底 #fafbfc、内容白底 #ffffff、分隔线 #e8ebf0；装饰强调色 #ec407a，辅助 #4b91df；浅底渐变 linear-gradient(135deg, #fce4ec, #e3f2fd)，更浅底 #fff7fb → #eef7ff。
-字体：清晰黑体。正文 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；标题 -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；数字 inherit，font-variant-numeric:tabular-nums。
-实际文字色：正文字色 #273445 / 字重 400；标题字色 #ad1457 / 字重 700；说明字色 #3b6d98 / 字重 400；重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。Highlight 使用 mark，重要语句使用 strong，真实链接带下划线。换背景后重新检查可读性。
+文字方案：清晰黑体。大标题、小标题、正文、注释分别设置。
+大标题（H1）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 40px，字重 700，行高 1.25，段后距 24px，字色 #ad1457。未单独自定，数值为整页基础。页面主题；手机最大 32px，长标题自然换行。
+小标题（H2 / H3）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 24px，字重 700，行高 1.4，段后距 16px，字色 #3b6d98。未单独自定，数值为整页基础。章节和模块标题；手机最大 26px，必要时再区分 H2 与 H3。
+正文（P）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 16px，字重 400，行高 1.75，段后距 18px，字色 #273445。未单独自定，数值为整页基础。连续阅读；内容增加时自然增高，不缩小字号硬塞。
+注释（图注 / 来源）：清晰黑体；font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif；字号 14px，字重 400，行高 1.65，段后距 12px，字色 #3b6d98。未单独自定，数值为整页基础。来源、单位和必要边界；不能因为字号小而省略。
+H3 次级小标题建议 20px；组件已有明确层级时保留其层级。
+数字字体 inherit，font-variant-numeric:tabular-nums。
+其他文字角色：重点字色 #bd3362 / 字重 500；加粗字色 #ad1457 / 字重 700；Highlight 底色 #fde8ef / 字重 400；Highlight 字色 #ad1457 / 字重 400；链接字色 #386ba5 / 字重 400。重要语句用 strong（700），高亮用 mark，链接保留下划线和可见焦点。以上为实际使用色；已检查白底、当前浅底和 Highlight 底的可读性，换背景后重新检查。
+胡晓波青年宋的准确家族名为 HuXiaoBo-qingniansong，使用细款 300 或粗款 700；Freeland 用于英文标题，保持 400，不人为加粗，中文按给定宋体序列回退。字体依赖接收设备已安装字体；此方案不附带或下载字体文件，未安装时使用回退字体。只调整文字展示，不改正文、来源和图表数据或颜色含义。
 
 【内容与图表边界】完整保留正文、已有结论的证据等级、数据、单位、口径、分母、时间、来源和已有图表交互。章节数、模块数、文字长度按内容决定，不为套样式删证据或缩小正文。图型由问题和数据选择，收藏不是图型白名单；字段不足时说明缺口，不补造数字、目标、阈值、评分、引语、关系或结论。页面装饰色不能覆盖已有图表的系列含义、坐标轴、图例、visualMap 或事件。
 【交付】提供可直接打开的完整 HTML；CSS 限定在本次报告根容器和专用类名内，不污染外部页面。优先单文件内嵌样式与必要脚本；若目标已有工程或依赖约定，遵守其约定并说明依赖。只有输入不足时才保留清楚注明缺口的空位。
