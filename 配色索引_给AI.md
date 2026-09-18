@@ -138,6 +138,8 @@
 - `script#palette-data`：5 组预设色板。`id` 是稳定标识，`code` 是沟通编号，`origin` 说明来源，`accent` / `secondary` 是强调与辅助色，`heading` / `explain` 是文字色，`start` / `end` / `angle` 定义主浅底渐变，`softStart` / `softEnd` 定义辅助浅底，`lineStart` / `lineEnd` 定义装饰细线，`usage` 定义使用范围。
 
 - `script#typography-data`：9 个文字颜色角色、5 种字体搭配、4 层可编辑文字参数、字重、默认推导和作用域规则。个人设置按色板保存在浏览器 `shelley-html-typography-v1` 中，不在公开源码中。
+- `script#search-aliases`：跨分类检索的用途别名，使用稳定条目编号。
+- `script#annotation-compatibility`：工作台预览的图表/标注兼容规则与回退项；不限制正式报告按真实字段另选图型与标注。
 - `script#chart-data`：40 种图表的编号、适用问题、字段、画法与边界。见《图表索引_给AI.md》。
 - `script#chart-demo-data`：单独存放的人工示意值，全部标记 `is_demo: true`，不是业务输入。
 
