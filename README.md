@@ -1,4 +1,4 @@
-# 雪莉的 HTML 布局、配色与图表收藏册
+# HTML 布局、配色与图表收藏册
 
 [打开在线收藏册](https://elsiehwang61-tech.github.io/html-layout-collection/) · [直接看图表](https://elsiehwang61-tech.github.io/html-layout-collection/#charts) · [GitHub 仓库](https://github.com/elsiehwang61-tech/html-layout-collection)
 
